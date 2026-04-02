@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panorama das Usinas - Central de Engajamento</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #f1f5f9;
+            background-image: 
+                radial-gradient(at top left, rgba(59, 130, 246, 0.05), transparent 60%),
+                radial-gradient(at bottom right, rgba(16, 185, 129, 0.05), transparent 60%);
+            background-attachment: fixed;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* EFEITO DE GLOW DINÂMICO */
+        .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.12); }
+        .glow-emerald { box-shadow: 0 0 20px rgba(16, 185, 129, 0.12); }
+        .glow-yellow { box-shadow: 0 0 20px rgba(234, 179, 8, 0.12); }
+        .glow-red { box-shadow: 0 0 20px rgba(239, 68, 68, 0.12); }
+
+        .glass-panel:hover {
+            box-shadow: none !important;
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        .tab-content { display: none; width: 100%; min-height: 400px; padding-bottom: 50px; }
+        .tab-content.active { display: block; animation: slideUp 0.5s ease-out; }
+        
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .nav-btn { position: relative; padding-bottom: 2px; color: #94a3b8; transition: all 0.3s; }
+        .nav-btn.active { color: #ffffff; font-weight: 600; }
+        .nav-btn.active::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            border-radius: 2px;
+        }
+
+        #lock-screen { position: fixed; inset: 0; z-index: 9999; background-color: #020617; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(20px); }
+        
+        /* Accordion Style */
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary i { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased" id="main-body">
+
+    <div id="lock-screen">
+        <div class="glass-panel p-8 rounded-2xl w-full max-w-md border border-slate-700 shadow-2xl text-center">
+            <div class="mb-6 flex justify-center">
+                <div class="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center border border-blue-500/30">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-blue-400"></i>
+                </div>
+            </div>
+            <h2 class="text-2xl font-bold text-white mb-2">Relatório Geral</h2>
+            <p class="text-slate-400 text-sm mb-8">Panorama das Usinas - Trimestre 01</p>
+            <form onsubmit="event.preventDefault(); checkPassword();" class="space-y-4">
+                <input type="password" id="password-input"
+                    class="w-full bg-slate-900/80 border border-slate-700 text-white text-center text-lg rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-black"
+                    placeholder="Senha de Acesso" autofocus>
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition-all active:scale-95 shadow-lg">
+                    Acessar Panorama
+                </button>
+            </form>
+            <p id="error-message" class="text-red-400 text-xs mt-4 font-medium hidden">Senha incorreta.</p>
+        </div>
+    </div>
+
+    <div id="report-content" class="transition-all duration-700 opacity-0 flex flex-col min-h-screen">
+
+        <header class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 bg-slate-950/80">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <img src="https://pedrogabriel1895-jpg.github.io/relatorios-central/logo-central.png" alt="Logo" class="h-10 w-auto">
+                    <div class="hidden sm:block border-l border-white/10 pl-4 ml-2">
+                        <h1 class="text-sm font-bold text-white tracking-wide">PANORAMA GERAL DAS USINAS</h1>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Janeiro - Fevereiro - Março</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex gap-8 text-sm">
+                    <button onclick="switchTab('visao')" id="btn-visao" class="nav-btn active">Visão Geral & Avanços</button>
+                    <button onclick="switchTab('usinas')" id="btn-usinas" class="nav-btn">Desempenho por Usina</button>
+                    <button onclick="switchTab('midia')" id="btn-midia" class="nav-btn">Comunidades & Mídias</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-grow pt-28 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+
+            <div id="tab-visao" class="tab-content active space-y-10">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="glass-panel glow-emerald p-6 rounded-2xl border-l-4 border-emerald-500">
+                        <p class="text-xs text-slate-400 uppercase font-bold mb-1">Crescimento Total (Canais)</p>
+                        <span class="text-3xl font-black text-white">+ 7.898</span>
+                    </div>
+                    <div class="glass-panel glow-blue p-6 rounded-2xl border-l-4 border-blue-500">
+                        <p class="text-xs text-slate-400 uppercase font-bold mb-1">Maior Crescimento %</p>
+                        <span class="text-3xl font-black text-white">56,99%</span>
+                        <p class="text-[10px] text-blue-400 mt-1">Usina Cabanagem</p>
+                    </div>
+                    <div class="glass-panel glow-yellow p-6 rounded-2xl border-l-4 border-yellow-500">
+                        <p class="text-xs text-slate-400 uppercase font-bold mb-1">Ações Realizadas</p>
+                        <span class="text-3xl font-black text-white">29</span>
+                        <p class="text-[10px] text-yellow-400 mt-1">No trimestre consolidado</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 space-y-6">
+                        <div class="glass-panel glow-blue p-8 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                                <i data-lucide="eye" class="text-blue-400"></i> Visão Geral do Período
+                            </h3>
+                            <p class="text-slate-300 leading-relaxed">
+                                Durante os três meses, observamos um crescimento dos impactos gerados pela Central. Cada usina se destacou de acordo com os esforços depositados. Icuí lidera a captação via QR Code, enquanto Marituba e Jurunas mantêm crescimento mesmo em reforma. O Canal da Terra Firme já ultrapassa 1.000 inscritos, e a Cabanagem opera com autonomia na captação. Em março, notamos uma estabilização positiva das ações em toda a rede.
+                            </p>
+                        </div>
+
+                        <div class="glass-panel glow-emerald p-8 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-4">Principais Avanços de Base</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead>
+                                        <tr class="text-slate-500 border-b border-white/10 uppercase text-[10px] font-black">
+                                            <th class="pb-3">Usina</th>
+                                            <th class="pb-3">Início</th>
+                                            <th class="pb-3">Atual</th>
+                                            <th class="pb-3 text-right">Crescimento</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-slate-300">
+                                        <tr class="border-b border-white/5"><td class="py-3 font-bold">Cabanagem</td><td>1.998</td><td>3.121</td><td class="text-right text-emerald-400">+56,9%</td></tr>
+                                        <tr class="border-b border-white/5"><td class="py-3 font-bold">Jurunas</td><td>0</td><td>3.080</td><td class="text-right text-emerald-400">Novo Canal</td></tr>
+                                        <tr class="border-b border-white/5"><td class="py-3 font-bold">Marituba</td><td>1.481</td><td>1.663</td><td class="text-right text-emerald-400">+12,2%</td></tr>
+                                        <tr><td class="py-3 font-bold">Icuí</td><td>0</td><td>2.820</td><td class="text-right text-emerald-400">Reativado</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel glow-yellow p-6 rounded-3xl space-y-6 text-sm">
+                        <h3 class="font-bold text-white uppercase tracking-widest text-xs flex items-center gap-2">
+                            <i data-lucide="calendar"></i> Cronograma Mensal
+                        </h3>
+                        <div class="border-l-2 border-yellow-500/30 pl-4 space-y-8 relative">
+                            <div>
+                                <span class="text-yellow-500 font-black block">JANEIRO</span>
+                                <p class="text-slate-400 text-xs italic">7 ações realizadas</p>
+                                <p class="text-slate-200 mt-1">Destaque: Liderança de captação no Icuí.</p>
+                            </div>
+                            <div>
+                                <span class="text-yellow-500 font-black block">FEVEREIRO</span>
+                                <p class="text-slate-400 text-xs italic">10 ações realizadas</p>
+                                <p class="text-slate-200 mt-1">Destaque: Baile de Carnaval e entradas de Marituba.</p>
+                            </div>
+                            <div>
+                                <span class="text-yellow-500 font-black block">MARÇO</span>
+                                <p class="text-slate-400 text-xs italic">12 ações realizadas</p>
+                                <p class="text-slate-200 mt-1">Destaque: Mês da Mulher e captação de feedbacks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-usinas" class="tab-content space-y-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-panel glow-blue p-6 rounded-3xl space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-black text-white">Icuí</h4>
+                            <span class="bg-blue-500/20 text-blue-400 text-[10px] px-2 py-1 rounded font-bold uppercase italic">Crescimento Lento</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-xs text-slate-400">Total: <span class="text-white font-bold">1.252 pessoas</span></p>
+                            <div class="flex gap-2 text-[10px] font-bold">
+                                <span class="bg-white/5 p-1 rounded">Jan: +248</span>
+                                <span class="bg-white/5 p-1 rounded">Fev: +8</span>
+                                <span class="bg-white/5 p-1 rounded">Mar: +72</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-red-400 italic">Ponto de Atenção: Queda de captação comparada ao início.</p>
+                    </div>
+
+                    <div class="glass-panel glow-red p-6 rounded-3xl space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-black text-white">Jurunas</h4>
+                            <span class="bg-red-500/20 text-red-400 text-[10px] px-2 py-1 rounded font-bold uppercase italic">Tendência: Queda</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-xs text-slate-400">Total: <span class="text-white font-bold">1.300 pessoas</span></p>
+                            <div class="flex gap-2 text-[10px] font-bold">
+                                <span class="bg-white/5 p-1 rounded">Jan: +351</span>
+                                <span class="bg-white/5 p-1 rounded">Fev: +16</span>
+                                <span class="bg-white/5 p-1 rounded">Mar: +20</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 italic">Situação: Finalizando reforma.</p>
+                    </div>
+
+                    <div class="glass-panel glow-yellow p-6 rounded-3xl space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-black text-white">Cabanagem</h4>
+                            <span class="bg-yellow-500/20 text-yellow-400 text-[10px] px-2 py-1 rounded font-bold uppercase italic">Estagnação</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-xs text-slate-400">Total: <span class="text-white font-bold">1.186 pessoas</span></p>
+                            <div class="flex gap-2 text-[10px] font-bold">
+                                <span class="bg-white/5 p-1 rounded">Jan: +86</span>
+                                <span class="bg-white/5 p-1 rounded">Fev: +47</span>
+                                <span class="bg-white/5 p-1 rounded">Mar: +56</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 italic">Obs: Trabalho autônomo sem cobranças diretas.</p>
+                    </div>
+
+                    <div class="glass-panel glow-red p-6 rounded-3xl space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-black text-white">Terra Firme</h4>
+                            <span class="bg-red-500/20 text-red-400 text-[10px] px-2 py-1 rounded font-bold uppercase italic">Tendência: Queda</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-xs text-slate-400">Total Central: <span class="text-white font-bold">79 pessoas</span></p>
+                            <p class="text-[10px] text-blue-400 font-black">CANAL: +1.000 pessoas</p>
+                        </div>
+                        <p class="text-xs text-slate-300 italic">Dificuldade em converter entradas para a Central.</p>
+                    </div>
+
+                    <div class="glass-panel glow-emerald p-6 rounded-3xl space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-lg font-black text-white">Marituba</h4>
+                            <span class="bg-emerald-500/20 text-emerald-400 text-[10px] px-2 py-1 rounded font-bold uppercase italic">Crescimento</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-xs text-slate-400">Total: <span class="text-white font-bold">623 pessoas</span></p>
+                            <div class="flex gap-2 text-[10px] font-bold">
+                                <span class="bg-white/5 p-1 rounded">Fev: +225</span>
+                                <span class="bg-white/5 p-1 rounded">Mar: +128</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 italic">Destaque positivo mesmo em período de reforma.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel glow-blue p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold text-white mb-4">Relacionamento & Coordenação</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="h-12 w-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">1h</div>
+                                <div>
+                                    <p class="text-white font-bold">Tempo médio de resposta</p>
+                                    <p class="text-xs text-slate-400">Comunicação fluida no privado e grupos.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="h-12 w-12 rounded-xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 font-bold">Médio</div>
+                                <div>
+                                    <p class="text-white font-bold">Nível de Retorno</p>
+                                    <p class="text-xs text-slate-400">Coordenação ativa, mas necessita reforço.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900/50 p-6 rounded-2xl border border-white/5 italic text-sm text-slate-400">
+                            "Estamos conseguindo nos comunicar com todos os coordenadores das usinas, tanto no grupo, quanto no privado. O relacionamento é estável."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-midia" class="tab-content space-y-12">
+                <div class="glass-panel glow-blue p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i data-lucide="message-square" class="text-blue-400"></i> Interação nas Comunidades (Mídias)
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <details class="group glass-panel rounded-2xl overflow-hidden border border-white/5">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-white/5 transition-all">
+                                <span class="font-bold text-slate-200">Usina Terra Firme</span>
+                                <i data-lucide="chevron-down" class="text-slate-500 transition-transform duration-300"></i>
+                            </summary>
+                            <div class="p-6 bg-slate-900/30 border-t border-white/5 text-center">
+                                <p class="text-xs text-slate-500 mb-4 italic">[SUBIR MÍDIA DA TERRA FIRME AQUI]</p>
+                                <div class="h-48 bg-white/5 rounded-xl flex items-center justify-center border-2 border-dashed border-white/10">
+                                    <i data-lucide="image" class="text-slate-700 w-12 h-12"></i>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="group glass-panel rounded-2xl overflow-hidden border border-white/5">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-white/5 transition-all">
+                                <span class="font-bold text-slate-200">Usina Icuí</span>
+                                <i data-lucide="chevron-down" class="text-slate-500 transition-transform duration-300"></i>
+                            </summary>
+                            <div class="p-6 bg-slate-900/30 border-t border-white/5 text-center">
+                                <p class="text-xs text-slate-500 mb-4 italic">[SUBIR MÍDIA DO ICUÍ AQUI]</p>
+                                <div class="h-48 bg-white/5 rounded-xl flex items-center justify-center border-2 border-dashed border-white/10">
+                                    <i data-lucide="image" class="text-slate-700 w-12 h-12"></i>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="group glass-panel rounded-2xl overflow-hidden border border-white/5">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-white/5 transition-all">
+                                <span class="font-bold text-slate-200">Usina Jurunas</span>
+                                <i data-lucide="chevron-down" class="text-slate-500 transition-transform duration-300"></i>
+                            </summary>
+                            <div class="p-6 bg-slate-900/30 border-t border-white/5 text-center">
+                                <p class="text-xs text-slate-500 mb-4 italic">[SUBIR MÍDIA DO JURUNAS AQUI]</p>
+                                <div class="h-48 bg-white/5 rounded-xl flex items-center justify-center border-2 border-dashed border-white/10">
+                                    <i data-lucide="image" class="text-slate-700 w-12 h-12"></i>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-panel glow-red p-8 rounded-3xl border-l-4 border-red-500">
+                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="alert-triangle" class="text-red-400"></i> Pontos de Atenção
+                        </h3>
+                        <ul class="text-slate-300 text-sm space-y-3 list-disc pl-4">
+                            <li>Dificuldade crítica de captação na Usina Terra Firme para a Central.</li>
+                            <li>Impacto operacional devido às reformas em Marituba e Jurunas.</li>
+                            <li>Queda de números pode ser operacional (falta de foco) ou contextual (equipes deslocadas).</li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel glow-emerald p-8 rounded-3xl border-l-4 border-emerald-500">
+                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="zap" class="text-emerald-400"></i> Próximos Passos
+                        </h3>
+                        <ul class="text-slate-300 text-sm space-y-3">
+                            <li class="flex gap-2"><strong>1.</strong> Reforçar comunicação com mensagens e cards explicativos de captação.</li>
+                            <li class="flex gap-2"><strong>2.</strong> Relembrar a necessidade de foco total nas respostas da Central.</li>
+                            <li class="flex gap-2"><strong>3.</strong> Criar novo material didático, reciclagem de treinamento.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="border-t border-white/5 bg-slate-950/90 py-8 text-center mt-12">
+            <p class="text-slate-600 text-[10px] uppercase tracking-widest font-black">
+                Central de Engajamento | Relatório Trimestral | Gerado em 2026
+            </p>
+        </footer>
+    </div>
+
+    <script>
+    const CONFIG = { senha: "engajaparausinas" };
+
+    const $ = id => document.getElementById(id);
+
+    function checkPassword() {
+        const input = $("password-input");
+        if (input.value === CONFIG.senha) {
+            $("lock-screen").style.display = "none";
+            $("report-content").style.opacity = "1";
+            document.body.style.overflow = "auto";
+            lucide.createIcons();
+        } else {
+            $("error-message").classList.remove("hidden");
+        }
+    }
+
+    function switchTab(name) {
+        document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+        document.querySelectorAll(".nav-btn").forEach(el => el.classList.remove("active"));
+        $("tab-" + name).classList.add("active");
+        $("btn-" + name).classList.add("active");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Bloqueia scroll antes da senha
+    document.body.style.overflow = "hidden";
+    </script>
+</body>
+</html>
