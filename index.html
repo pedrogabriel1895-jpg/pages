@@ -236,97 +236,103 @@
 
             <div id="tab-comunidades" class="tab-content space-y-8">
                 
-                <div class="glass-panel glow-blue p-8 rounded-3xl mb-8">
-                    <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                        <i data-lucide="message-square" class="text-blue-400"></i> Interações nas Comunidades
-                    </h3>
-                    <p class="text-slate-300 text-sm">Todas as usinas estão com canal ativo e todas estão colocando comunicação/informativo todos os dias mantendo a base engajada.</p>
-                </div>
-
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     
-                    <div class="lg:col-span-5 space-y-4">
+                    <div class="lg:col-span-7 glass-panel glow-blue p-6 sm:p-8 rounded-3xl border-l-4 border-blue-500 h-fit">
                         
-                        <div class="glass-panel p-4 rounded-2xl border-l-4 border-red-500">
-                            <div class="flex justify-between items-center gap-2 mb-3">
-                                <div class="flex items-center gap-2">
-                                    <span class="h-2.5 w-2.5 rounded-full bg-red-500 animate-pulse min-w-[10px]"></span>
-                                    <h4 class="text-sm font-bold text-white tracking-wide">Terra Firme</h4>
-                                </div>
-                                <div class="flex gap-2">
-                                    <div class="bg-white/5 px-2 py-1 rounded-lg text-center border border-white/5"><p class="text-[7px] text-slate-500 font-black uppercase">Alcance</p><p class="text-xs font-bold text-blue-400">1.495</p></div>
-                                    <div class="bg-white/5 px-2 py-1 rounded-lg text-center border border-white/5"><p class="text-[7px] text-slate-500 font-black uppercase">Líquido</p><p class="text-xs font-bold text-emerald-400">+1.029</p></div>
-                                </div>
-                            </div>
-                            <details class="group">
-                                <summary class="flex items-center justify-center gap-2 py-1.5 bg-white/5 rounded-xl cursor-pointer text-[9px] font-black uppercase text-slate-400 hover:text-white transition-all">
-                                    <span>EXIBIR MÉTRICAS DO WHATSAPP</span><i data-lucide="chevron-down" class="w-3.5 h-3.5 group-open:rotate-180 transition-transform"></i>
-                                </summary>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                                    <img src="tf-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
-                                    <img src="tf-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
-                                </div>
-                            </details>
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                                <i data-lucide="message-square" class="text-blue-400"></i> Interações nas Comunidades
+                            </h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Todas as usinas estão com canal ativo e todas estão colocando comunicação/informativo todos os dias mantendo a base engajada.
+                            </p>
                         </div>
 
-                        <div class="glass-panel p-4 rounded-2xl border-l-4 border-blue-500">
-                            <div class="flex justify-between items-center gap-2 mb-3">
-                                <div class="flex items-center gap-2">
-                                    <span class="h-2.5 w-2.5 rounded-full bg-blue-500 animate-pulse min-w-[10px]"></span>
-                                    <h4 class="text-sm font-bold text-white tracking-wide">Icuí</h4>
+                        <div class="space-y-4">
+                            
+                            <div class="bg-slate-950/50 p-4 sm:p-5 rounded-2xl border border-white/5 border-l-4 border-l-red-500">
+                                <div class="flex flex-wrap justify-between items-center gap-4 mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <span class="h-2.5 w-2.5 rounded-full bg-red-500 animate-pulse min-w-[10px]"></span>
+                                        <h4 class="text-base font-bold text-white tracking-wide">Terra Firme</h4>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <div class="bg-black/30 px-3 py-1 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-sm font-bold text-blue-400">1.495</p></div>
+                                        <div class="bg-black/30 px-3 py-1 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-sm font-bold text-emerald-400">+1.029</p></div>
+                                    </div>
                                 </div>
-                                <div class="flex gap-2">
-                                    <div class="bg-white/5 px-2 py-1 rounded-lg text-center border border-white/5"><p class="text-[7px] text-slate-500 font-black uppercase">Alcance</p><p class="text-xs font-bold text-blue-400">2.385</p></div>
-                                    <div class="bg-white/5 px-2 py-1 rounded-lg text-center border border-white/5"><p class="text-[7px] text-slate-500 font-black uppercase">Líquido</p><p class="text-xs font-bold text-emerald-400">+131</p></div>
-                                </div>
+                                <details class="group">
+                                    <summary class="flex items-center justify-center gap-2 py-1.5 bg-black/30 rounded-xl cursor-pointer text-[9px] font-black uppercase text-slate-400 hover:text-white border border-white/5 transition-all">
+                                        <span>EXIBIR MÉTRICAS DO WHATSAPP</span><i data-lucide="chevron-down" class="w-3.5 h-3.5 group-open:rotate-180 transition-transform"></i>
+                                    </summary>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                        <img src="tf-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                        <img src="tf-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                    </div>
+                                </details>
                             </div>
-                            <details class="group">
-                                <summary class="flex items-center justify-center gap-2 py-1.5 bg-white/5 rounded-xl cursor-pointer text-[9px] font-black uppercase text-slate-400 hover:text-white transition-all">
-                                    <span>EXIBIR MÉTRICAS DO WHATSAPP</span><i data-lucide="chevron-down" class="w-3.5 h-3.5 group-open:rotate-180 transition-transform"></i>
-                                </summary>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                                    <img src="icui-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
-                                    <img src="icui-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
-                                </div>
-                            </details>
-                        </div>
 
-                        <div class="glass-panel p-4 rounded-2xl border-l-4 border-emerald-500">
-                            <div class="flex justify-between items-center gap-2 mb-3">
-                                <div class="flex items-center gap-2">
-                                    <span class="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse min-w-[10px]"></span>
-                                    <h4 class="text-sm font-bold text-white tracking-wide">Jurunas</h4>
+                            <div class="bg-slate-950/50 p-4 sm:p-5 rounded-2xl border border-white/5 border-l-4 border-l-blue-500">
+                                <div class="flex flex-wrap justify-between items-center gap-4 mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <span class="h-2.5 w-2.5 rounded-full bg-blue-500 animate-pulse min-w-[10px]"></span>
+                                        <h4 class="text-base font-bold text-white tracking-wide">Icuí</h4>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <div class="bg-black/30 px-3 py-1 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-sm font-bold text-blue-400">2.385</p></div>
+                                        <div class="bg-black/30 px-3 py-1 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-sm font-bold text-emerald-400">+131</p></div>
+                                    </div>
                                 </div>
-                                <div class="flex gap-2">
-                                    <div class="bg-white/5 px-2 py-1 rounded-lg text-center border border-white/5"><p class="text-[7px] text-slate-500 font-black uppercase">Alcance</p><p class="text-xs font-bold text-blue-400">4.746</p></div>
-                                    <div class="bg-white/5 px-2 py-1 rounded-lg text-center border border-white/5"><p class="text-[7px] text-slate-500 font-black uppercase">Líquido</p><p class="text-xs font-bold text-emerald-400">+3.233</p></div>
-                                </div>
+                                <details class="group">
+                                    <summary class="flex items-center justify-center gap-2 py-1.5 bg-black/30 rounded-xl cursor-pointer text-[9px] font-black uppercase text-slate-400 hover:text-white border border-white/5 transition-all">
+                                        <span>EXIBIR MÉTRICAS DO WHATSAPP</span><i data-lucide="chevron-down" class="w-3.5 h-3.5 group-open:rotate-180 transition-transform"></i>
+                                    </summary>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                        <img src="icui-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                        <img src="icui-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                    </div>
+                                </details>
                             </div>
-                            <details class="group">
-                                <summary class="flex items-center justify-center gap-2 py-1.5 bg-white/5 rounded-xl cursor-pointer text-[9px] font-black uppercase text-slate-400 hover:text-white transition-all">
-                                    <span>EXIBIR MÉTRICAS DO WHATSAPP</span><i data-lucide="chevron-down" class="w-3.5 h-3.5 group-open:rotate-180 transition-transform"></i>
-                                </summary>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                                    <img src="jurunas-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
-                                    <img src="jurunas-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+
+                            <div class="bg-slate-950/50 p-4 sm:p-5 rounded-2xl border border-white/5 border-l-4 border-l-emerald-500">
+                                <div class="flex flex-wrap justify-between items-center gap-4 mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <span class="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse min-w-[10px]"></span>
+                                        <h4 class="text-base font-bold text-white tracking-wide">Jurunas</h4>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <div class="bg-black/30 px-3 py-1 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-sm font-bold text-blue-400">4.746</p></div>
+                                        <div class="bg-black/30 px-3 py-1 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-sm font-bold text-emerald-400">+3.233</p></div>
+                                    </div>
                                 </div>
-                            </details>
+                                <details class="group">
+                                    <summary class="flex items-center justify-center gap-2 py-1.5 bg-black/30 rounded-xl cursor-pointer text-[9px] font-black uppercase text-slate-400 hover:text-white border border-white/5 transition-all">
+                                        <span>EXIBIR MÉTRICAS DO WHATSAPP</span><i data-lucide="chevron-down" class="w-3.5 h-3.5 group-open:rotate-180 transition-transform"></i>
+                                    </summary>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                        <img src="jurunas-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                        <img src="jurunas-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                    </div>
+                                </details>
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="lg:col-span-7 space-y-6">
+                    <div class="lg:col-span-5 space-y-6">
                         
-                        <div class="glass-panel glow-red p-8 rounded-3xl border-l-4 border-red-500 h-fit">
+                        <div class="glass-panel glow-red p-6 sm:p-8 rounded-3xl border-l-4 border-red-500 h-fit">
                             <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                 <i data-lucide="alert-triangle" class="text-red-400"></i> Pontos de Atenção
                             </h3>
-                            <ul class="text-slate-300 text-base space-y-4 list-disc pl-5">
+                            <ul class="text-slate-300 text-sm sm:text-base space-y-4 list-disc pl-5">
                                 <li>Dificuldade de captação de Terra Firme</li>
                                 <li>Reforma nas usinas de Marituba e Jurunas</li>
                             </ul>
                         </div>
 
-                        <div class="glass-panel glow-emerald p-8 rounded-3xl border-l-4 border-emerald-500 h-fit">
+                        <div class="glass-panel glow-emerald p-6 sm:p-8 rounded-3xl border-l-4 border-emerald-500 h-fit">
                             <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
                                 <i data-lucide="zap" class="text-emerald-400"></i> Próximos Passos
                             </h3>
