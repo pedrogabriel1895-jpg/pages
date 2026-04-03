@@ -85,8 +85,8 @@
                     </div>
                 </div>
                 <nav class="flex gap-4 sm:gap-8 text-[11px] sm:text-sm overflow-x-auto no-scrollbar py-2">
-                    <button onclick="switchTab('visao')" id="btn-visao" class="nav-btn active">Visão Geral</button>
-                    <button onclick="switchTab('monitoramento')" id="btn-monitoramento" class="nav-btn">Monitoramento</button>
+                    <button onclick="switchTab('visao')" id="btn-visao" class="nav-btn active">Visão Geral & Avanços</button>
+                    <button onclick="switchTab('monitoramento')" id="btn-monitoramento" class="nav-btn">Desempenho por Usina</button>
                     <button onclick="switchTab('comunidades')" id="btn-comunidades" class="nav-btn">Comunidades</button>
                 </nav>
             </div>
@@ -98,7 +98,7 @@
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                     <div class="glass-panel glow-emerald p-6 rounded-2xl border-l-4 border-emerald-500">
-                        <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Crescimento Total</p>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Crescimento Total dos Canais</p>
                         <span class="text-3xl font-black text-white">+ 7.898</span>
                     </div>
                     <div class="glass-panel glow-blue p-6 rounded-2xl border-l-4 border-blue-500">
@@ -107,7 +107,7 @@
                         <p class="text-[9px] text-blue-400 mt-1 uppercase font-bold tracking-widest">Cabanagem</p>
                     </div>
                     <div class="glass-panel glow-yellow p-6 rounded-2xl border-l-4 border-yellow-500">
-                        <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Ações Trimestre</p>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Ações do Trimestre</p>
                         <span class="text-3xl font-black text-white">29</span>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="glass-panel glow-emerald p-8 rounded-3xl overflow-x-auto">
-                            <h3 class="text-xl font-bold text-white mb-4">Avanços Consolidados de Base</h3>
+                            <h3 class="text-xl font-bold text-white mb-4">Destaques de Avanços dos Canais</h3>
                             <table class="w-full text-left text-sm min-w-[400px]">
                                 <thead>
                                     <tr class="text-slate-500 border-b border-white/10 uppercase text-[10px] font-black"><th class="pb-3">Usina</th><th class="pb-3">Início</th><th class="pb-3">Atual</th><th class="pb-3 text-right">Impacto</th></tr>
@@ -182,7 +182,7 @@
                     <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
                         <i data-lucide="bar-chart-2" class="text-blue-400"></i> Entradas & Monitoramento Operacional
                     </h3>
-                    <p class="text-slate-300 text-sm">Resumo da evolução da captação de base e pontos focais de cada usina no período analisado.</p>
+                    <p class="text-slate-300 text-sm">Resumo da evolução da captação de base de cada usina no período analisado.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -211,7 +211,6 @@
                             </div>
 
                             <div class="space-y-4 pt-6 border-t border-white/5">
-                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-blue-400">Crescimento lento.</p></div>
                                 <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-yellow-400 font-bold">Poucas captações comparadas aos outros meses.</p></div>
                             </div>
                         </div>
@@ -243,7 +242,6 @@
                             <div class="space-y-4 pt-6 border-t border-white/5">
                                 <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Finalizando reforma.</p></div>
                                 <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value text-slate-300">Cresceu ao longo dos meses.</p></div>
-                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda.</p></div>
                             </div>
                         </div>
                     </div>
@@ -273,7 +271,6 @@
 
                             <div class="space-y-4 pt-6 border-t border-white/5">
                                 <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Encontra-se com "estagnação".</p></div>
-                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda de captações.</p></div>
                                 <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-red-400 font-bold">Poucas entradas na Central.</p></div>
                             </div>
                         </div>
@@ -310,7 +307,6 @@
                             <div class="space-y-4 pt-6 border-t border-white/5">
                                 <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Poucas entradas na central, maior ativação na entrada do canal.</p></div>
                                 <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value text-slate-300">Dificuldade de crescimento.</p></div>
-                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda.</p></div>
                                 <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-red-400 font-bold">Mesmo com conversas e reunião, ainda não conseguimos manter um fluxo de captações.</p></div>
                             </div>
                         </div>
@@ -341,7 +337,6 @@
                                 </div>
                                 <div class="space-y-4 md:border-l md:border-white/5 md:pl-8">
                                     <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Está finalizando uma reforma.</p></div>
-                                    <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-emerald-400">Crescimento.</p></div>
                                 </div>
                             </div>
                         </div>
@@ -472,12 +467,6 @@
                             <ul class="text-slate-300 text-sm space-y-3 list-disc pl-5 mb-8">
                                 <li>Reforçar comunicação com: Mensagens, Cards explicativos (como captar)</li>
                                 <li>Relembrar necessidade de: Responder grupos, Focar na central, Criar novo material, mesmo já tendo enviado antes</li>
-                            </ul>
-
-                            <h4 class="text-[11px] font-black text-slate-500 uppercase mb-3 tracking-widest border-t border-white/10 pt-6">Leitura final:</h4>
-                            <ul class="text-slate-300 text-sm space-y-3 list-disc pl-5">
-                                <li>Queda de números pode ser: Operacional (falta de foco/adesão), Contextual (equipes deslocadas para ações)</li>
-                                <li>Um reforço leve de comunicação pode ajudar a recuperar os resultados.</li>
                             </ul>
                         </div>
 
