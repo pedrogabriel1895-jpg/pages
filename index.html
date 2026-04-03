@@ -42,12 +42,13 @@
         }
 
         #lock-screen { position: fixed; inset: 0; z-index: 9999; background-color: #020617; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(20px); padding: 20px; }
+        
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
         /* Estilos de Detalhes Técnicos */
         .detail-row { border-left: 2px solid rgba(255,255,255,0.1); padding-left: 12px; margin-bottom: 12px; }
-        .detail-label { font-size: 9px; text-transform: uppercase; font-weight: 900; color: #94a3b8; letter-spacing: 0.1em; }
+        .detail-label { font-size: 9px; text-transform: uppercase; font-weight: 900; color: #94a3b8; letter-spacing: 0.1em; margin-bottom: 2px; }
         .detail-value { font-size: 13px; color: #f1f5f9; line-height: 1.4; }
         
         details summary::-webkit-details-marker { display: none; }
@@ -56,7 +57,7 @@
 <body class="min-h-screen flex flex-col antialiased" id="main-body">
 
     <div id="lock-screen">
-        <div class="glass-panel p-8 rounded-2xl w-full max-w-md border border-slate-700 shadow-2xl text-center">
+        <div class="glass-panel p-6 sm:p-8 rounded-2xl w-full max-w-md border border-slate-700 shadow-2xl text-center">
             <div class="mb-6 flex justify-center">
                 <div class="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center border border-blue-500/30">
                     <i data-lucide="shield-check" class="w-8 h-8 text-blue-400"></i>
@@ -93,9 +94,9 @@
 
         <main class="flex-grow pt-28 pb-12 px-4 sm:px-6 max-w-7xl mx-auto w-full">
 
-            <div id="tab-visao" class="tab-content active space-y-10">
+            <div id="tab-visao" class="tab-content active space-y-8 sm:space-y-10">
                 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                     <div class="glass-panel glow-emerald p-6 rounded-2xl border-l-4 border-emerald-500">
                         <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Crescimento Total</p>
                         <span class="text-3xl font-black text-white">+ 7.898</span>
@@ -113,7 +114,7 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-2 space-y-6">
-                        <div class="glass-panel glow-blue p-8 rounded-3xl">
+                        <div class="glass-panel glow-blue p-6 sm:p-8 rounded-3xl">
                             <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                 <i data-lucide="eye" class="text-blue-400"></i> Cenário Geral
                             </h3>
@@ -122,21 +123,19 @@
                             </p>
                         </div>
 
-                        <div class="glass-panel glow-emerald p-8 rounded-3xl">
+                        <div class="glass-panel glow-emerald p-6 sm:p-8 rounded-3xl overflow-x-auto">
                             <h3 class="text-xl font-bold text-white mb-4">Avanços Consolidados de Base</h3>
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-left text-sm">
-                                    <thead>
-                                        <tr class="text-slate-500 border-b border-white/10 uppercase text-[10px] font-black"><th class="pb-3">Usina</th><th class="pb-3">Início</th><th class="pb-3">Atual</th><th class="pb-3 text-right">Impacto</th></tr>
-                                    </thead>
-                                    <tbody class="text-slate-300">
-                                        <tr class="border-b border-white/5"><td class="py-3 font-bold">Cabanagem</td><td>1.998</td><td>3.121</td><td class="text-right text-emerald-400 font-black">+56,9%</td></tr>
-                                        <tr class="border-b border-white/5"><td class="py-3 font-bold">Jurunas</td><td>0</td><td>3.080</td><td class="text-right text-emerald-400 font-black">Startup</td></tr>
-                                        <tr class="border-b border-white/5"><td class="py-3 font-bold">Marituba</td><td>1.481</td><td>1.663</td><td class="text-right text-emerald-400 font-black">+12,2%</td></tr>
-                                        <tr><td class="py-3 font-bold">Icuí</td><td>0</td><td>2.820</td><td class="text-right text-emerald-400 font-black">Reativado</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <table class="w-full text-left text-sm min-w-[400px]">
+                                <thead>
+                                    <tr class="text-slate-500 border-b border-white/10 uppercase text-[10px] font-black"><th class="pb-3">Usina</th><th class="pb-3">Início</th><th class="pb-3">Atual</th><th class="pb-3 text-right">Impacto</th></tr>
+                                </thead>
+                                <tbody class="text-slate-300">
+                                    <tr class="border-b border-white/5"><td class="py-3 font-bold">Cabanagem</td><td>1.998</td><td>3.121</td><td class="text-right text-emerald-400 font-black">+56,9%</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-3 font-bold">Jurunas</td><td>0</td><td>3.080</td><td class="text-right text-emerald-400 font-black">Startup</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-3 font-bold">Marituba</td><td>1.481</td><td>1.663</td><td class="text-right text-emerald-400 font-black">+12,2%</td></tr>
+                                    <tr><td class="py-3 font-bold">Icuí</td><td>0</td><td>2.820</td><td class="text-right text-emerald-400 font-black">Reativado</td></tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
@@ -160,9 +159,10 @@
                                 <h4 class="text-2xl font-black text-white">Marituba</h4>
                                 <span class="bg-emerald-500/20 text-emerald-400 text-[9px] px-3 py-1 rounded-full font-bold uppercase italic tracking-widest">Crescimento</span>
                             </div>
-                            <div id="det-marituba" class="hidden space-y-4 pt-4 border-t border-white/5 animate-slide-up">
-                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Está finalizando uma reforma estrutural.</p></div>
-                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-emerald-400">Crescimento contínuo observado.</p></div>
+                            <div class="text-sm text-slate-400 mb-2">Base Total: <span class="text-white font-bold">623</span></div>
+                            <div id="det-marituba" class="hidden space-y-4 pt-4 border-t border-white/5 animate-slide-up mt-2">
+                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Está finalizando uma reforma.</p></div>
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-emerald-400">Crescimento.</p></div>
                             </div>
                         </div>
                         <button onclick="toggleDetails('marituba')" id="btn-marituba" class="mt-6 w-full py-2 bg-white/5 hover:bg-white/10 rounded-xl text-[10px] font-black uppercase text-slate-400 transition-all">Ver Monitoramento</button>
@@ -174,9 +174,10 @@
                                 <h4 class="text-2xl font-black text-white">Icuí</h4>
                                 <span class="bg-blue-500/20 text-blue-400 text-[9px] px-3 py-1 rounded-full font-bold uppercase italic tracking-widest">Crescimento Lento</span>
                             </div>
-                            <div id="det-icui" class="hidden space-y-4 pt-4 border-t border-white/5 animate-slide-up">
-                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Operação estabilizada com foco em QR Code.</p></div>
-                                <div class="detail-row"><p class="detail-label">Ponto de Atenção</p><p class="detail-value text-yellow-400">Poucas captações comparadas aos meses anteriores.</p></div>
+                            <div class="text-sm text-slate-400 mb-2">Base Total: <span class="text-white font-bold">1.252</span></div>
+                            <div id="det-icui" class="hidden space-y-4 pt-4 border-t border-white/5 animate-slide-up mt-2">
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-blue-400">Crescimento lento.</p></div>
+                                <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-yellow-400">Poucas captações comparadas aos outros meses.</p></div>
                             </div>
                         </div>
                         <button onclick="toggleDetails('icui')" id="btn-icui" class="mt-6 w-full py-2 bg-white/5 hover:bg-white/10 rounded-xl text-[10px] font-black uppercase text-slate-400 transition-all">Ver Monitoramento</button>
@@ -188,10 +189,11 @@
                                 <h4 class="text-2xl font-black text-white">Cabanagem</h4>
                                 <span class="bg-yellow-500/20 text-yellow-400 text-[9px] px-3 py-1 rounded-full font-bold uppercase italic tracking-widest">Estagnação</span>
                             </div>
-                            <div id="det-cabanagem" class="hidden space-y-4 pt-4 border-t border-white/5 animate-slide-up">
-                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Encontra-se em estado de estagnação de entradas.</p></div>
-                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda de captações observada.</p></div>
-                                <div class="detail-row"><p class="detail-label">Ponto de Atenção</p><p class="detail-value text-red-400 font-bold">Poucas entradas diretas na Central.</p></div>
+                            <div class="text-sm text-slate-400 mb-2">Base Total: <span class="text-white font-bold">1.186</span></div>
+                            <div id="det-cabanagem" class="hidden space-y-4 pt-4 border-t border-white/5 animate-slide-up mt-2">
+                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Encontra-se com "estagnação".</p></div>
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda de captações.</p></div>
+                                <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-red-400 font-bold">Poucas entradas na Central.</p></div>
                             </div>
                         </div>
                         <button onclick="toggleDetails('cabanagem')" id="btn-cabanagem" class="mt-6 w-full py-2 bg-white/5 hover:bg-white/10 rounded-xl text-[10px] font-black uppercase text-slate-400 transition-all">Ver Monitoramento</button>
@@ -201,12 +203,14 @@
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <h4 class="text-2xl font-black text-white">Terra Firme</h4>
-                                <span class="bg-red-500/20 text-red-400 text-[9px] px-3 py-1 rounded-full font-bold uppercase italic tracking-widest">Tendência: Queda</span>
+                                <span class="bg-red-500/20 text-red-400 text-[9px] px-3 py-1 rounded-full font-bold uppercase italic tracking-widest">Queda</span>
                             </div>
-                            <div id="det-terrafirme" class="hidden space-y-4 pt-4 border-t border-white/5 animate-slide-up">
-                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Poucas entradas na central; maior ativação no Canal.</p></div>
-                                <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value">Dificuldade persistente de crescimento na base.</p></div>
-                                <div class="detail-row"><p class="detail-label">Ponto de Atenção</p><p class="detail-value text-red-400 font-bold">Fluxo não mantido mesmo após reuniões e conversas.</p></div>
+                            <div class="text-sm text-slate-400 mb-2">Central: <span class="text-white font-bold">79</span> | Canal: <span class="text-blue-400 font-bold">+1k</span></div>
+                            <div id="det-terrafirme" class="hidden space-y-4 pt-4 border-t border-white/5 animate-slide-up mt-2">
+                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Poucas entradas na central, maior ativação na entrada do canal.</p></div>
+                                <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value">Dificuldade de crescimento.</p></div>
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda.</p></div>
+                                <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-red-400 font-bold">Mesmo com conversas e reunião, ainda na conseguimos manter um fluxo de captações.</p></div>
                             </div>
                         </div>
                         <button onclick="toggleDetails('terrafirme')" id="btn-terrafirme" class="mt-6 w-full py-2 bg-white/5 hover:bg-white/10 rounded-xl text-[10px] font-black uppercase text-slate-400 transition-all">Ver Monitoramento</button>
@@ -218,9 +222,11 @@
                                 <h4 class="text-2xl font-black text-white">Jurunas</h4>
                                 <span class="bg-red-500/20 text-red-400 text-[9px] px-3 py-1 rounded-full font-bold uppercase italic tracking-widest">Tendência: Queda</span>
                             </div>
-                            <div id="det-jurunas" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-white/5 animate-slide-up">
-                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Finalizando reforma física.</p></div>
-                                <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value">Cresceu no início, mas apresenta queda no momento.</p></div>
+                            <div class="text-sm text-slate-400 mb-2">Base Total: <span class="text-white font-bold">1.300</span></div>
+                            <div id="det-jurunas" class="hidden grid grid-cols-1 md:grid-cols-2 gap-x-8 pt-4 border-t border-white/5 animate-slide-up mt-2">
+                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value">Finalizando reforma.</p></div>
+                                <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value">Cresceu ao longo dos meses.</p></div>
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda.</p></div>
                             </div>
                         </div>
                         <button onclick="toggleDetails('jurunas')" id="btn-jurunas" class="mt-6 w-full py-2 bg-white/5 hover:bg-white/10 rounded-xl text-[10px] font-black uppercase text-slate-400 transition-all">Ver Monitoramento</button>
@@ -229,63 +235,100 @@
                 </div>
             </div>
 
-            <div id="tab-comunidades" class="tab-content space-y-10">
+            <div id="tab-comunidades" class="tab-content space-y-8">
                 
-                <div class="glass-panel p-6 rounded-3xl space-y-6 border-l-4 border-red-500">
-                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                        <div class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-red-500 animate-pulse"></span><h4 class="text-xl font-bold text-white uppercase tracking-tighter">Terra Firme</h4></div>
-                        <div class="grid grid-cols-2 gap-3 w-full sm:w-auto">
-                            <div class="bg-white/5 px-4 py-2 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-lg font-bold text-blue-400">1.495</p></div>
-                            <div class="bg-white/5 px-4 py-2 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-lg font-bold text-emerald-400">+1.029</p></div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <div class="lg:col-span-2 space-y-6">
+                        
+                        <div class="glass-panel p-5 rounded-3xl border-l-4 border-red-500">
+                            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+                                <div class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-red-500 animate-pulse"></span><h4 class="text-lg font-bold text-white uppercase tracking-tighter">Terra Firme</h4></div>
+                                <div class="flex gap-2">
+                                    <div class="bg-white/5 px-3 py-1.5 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-base font-bold text-blue-400">1.495</p></div>
+                                    <div class="bg-white/5 px-3 py-1.5 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-base font-bold text-emerald-400">+1.029</p></div>
+                                </div>
+                            </div>
+                            <details class="group">
+                                <summary class="flex items-center justify-center gap-2 py-2 bg-white/5 rounded-xl cursor-pointer text-[10px] font-black uppercase text-slate-400 hover:text-white transition-all">
+                                    <span>Exibir Prints do Instagram</span><i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                    <img src="tf-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                    <img src="tf-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                </div>
+                            </details>
                         </div>
-                    </div>
-                    <details class="group">
-                        <summary class="flex items-center justify-center gap-2 py-2 bg-white/5 rounded-xl cursor-pointer text-[10px] font-black uppercase text-slate-400 hover:text-white transition-all">
-                            <span>Exibir Prints do Instagram</span><i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
-                        </summary>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                            <div class="space-y-2 text-center"><p class="text-[9px] text-slate-500 uppercase font-bold">Alcance & Regiões</p><img src="tf-alcance.png" class="rounded-2xl border border-white/10 w-full shadow-2xl"></div>
-                            <div class="space-y-2 text-center"><p class="text-[9px] text-slate-500 uppercase font-bold">Curva de Crescimento</p><img src="tf-crescimento.png" class="rounded-2xl border border-white/10 w-full shadow-2xl"></div>
-                        </div>
-                    </details>
-                </div>
 
-                <div class="glass-panel p-6 rounded-3xl space-y-6 border-l-4 border-blue-500">
-                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                        <div class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-blue-500 animate-pulse"></span><h4 class="text-xl font-bold text-white uppercase tracking-tighter">Icuí</h4></div>
-                        <div class="grid grid-cols-2 gap-3 w-full sm:w-auto">
-                            <div class="bg-white/5 px-4 py-2 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-lg font-bold text-blue-400">2.385</p></div>
-                            <div class="bg-white/5 px-4 py-2 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-lg font-bold text-emerald-400">+131</p></div>
+                        <div class="glass-panel p-5 rounded-3xl border-l-4 border-blue-500">
+                            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+                                <div class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-blue-500 animate-pulse"></span><h4 class="text-lg font-bold text-white uppercase tracking-tighter">Icuí</h4></div>
+                                <div class="flex gap-2">
+                                    <div class="bg-white/5 px-3 py-1.5 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-base font-bold text-blue-400">2.385</p></div>
+                                    <div class="bg-white/5 px-3 py-1.5 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-base font-bold text-emerald-400">+131</p></div>
+                                </div>
+                            </div>
+                            <details class="group">
+                                <summary class="flex items-center justify-center gap-2 py-2 bg-white/5 rounded-xl cursor-pointer text-[10px] font-black uppercase text-slate-400 hover:text-white transition-all">
+                                    <span>Exibir Prints do Instagram</span><i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                    <img src="icui-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                    <img src="icui-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                </div>
+                            </details>
                         </div>
-                    </div>
-                    <details class="group">
-                        <summary class="flex items-center justify-center gap-2 py-2 bg-white/5 rounded-xl cursor-pointer text-[10px] font-black uppercase text-slate-400 hover:text-white transition-all">
-                            <span>Exibir Prints do Instagram</span><i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
-                        </summary>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                            <img src="icui-alcance.png" class="rounded-2xl border border-white/10 w-full shadow-2xl">
-                            <img src="icui-crescimento.png" class="rounded-2xl border border-white/10 w-full shadow-2xl">
-                        </div>
-                    </details>
-                </div>
 
-                <div class="glass-panel p-6 rounded-3xl space-y-6 border-l-4 border-emerald-500">
-                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                        <div class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-emerald-500 animate-pulse"></span><h4 class="text-xl font-bold text-white uppercase tracking-tighter">Jurunas</h4></div>
-                        <div class="grid grid-cols-2 gap-3 w-full sm:w-auto">
-                            <div class="bg-white/5 px-4 py-2 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-lg font-bold text-blue-400">4.746</p></div>
-                            <div class="bg-white/5 px-4 py-2 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-lg font-bold text-emerald-400">+3.233</p></div>
+                        <div class="glass-panel p-5 rounded-3xl border-l-4 border-emerald-500">
+                            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+                                <div class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-emerald-500 animate-pulse"></span><h4 class="text-lg font-bold text-white uppercase tracking-tighter">Jurunas</h4></div>
+                                <div class="flex gap-2">
+                                    <div class="bg-white/5 px-3 py-1.5 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Alcance</p><p class="text-base font-bold text-blue-400">4.746</p></div>
+                                    <div class="bg-white/5 px-3 py-1.5 rounded-xl text-center border border-white/5"><p class="text-[8px] text-slate-500 font-black uppercase">Líquido</p><p class="text-base font-bold text-emerald-400">+3.233</p></div>
+                                </div>
+                            </div>
+                            <details class="group">
+                                <summary class="flex items-center justify-center gap-2 py-2 bg-white/5 rounded-xl cursor-pointer text-[10px] font-black uppercase text-slate-400 hover:text-white transition-all">
+                                    <span>Exibir Prints do Instagram</span><i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
+                                </summary>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                    <img src="jurunas-alcance.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                    <img src="jurunas-crescimento.png" class="rounded-xl border border-white/10 w-full shadow-lg">
+                                </div>
+                            </details>
                         </div>
                     </div>
-                    <details class="group">
-                        <summary class="flex items-center justify-center gap-2 py-2 bg-white/5 rounded-xl cursor-pointer text-[10px] font-black uppercase text-slate-400 hover:text-white transition-all">
-                            <span>Exibir Prints do Instagram</span><i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
-                        </summary>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                            <img src="jurunas-alcance.png" class="rounded-2xl border border-white/10 w-full shadow-2xl">
-                            <img src="jurunas-crescimento.png" class="rounded-2xl border border-white/10 w-full shadow-2xl">
+
+                    <div class="space-y-6">
+                        <div class="glass-panel glow-red p-6 rounded-3xl border-l-4 border-red-500">
+                            <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                <i data-lucide="alert-triangle" class="text-red-400"></i> Pontos de Atenção
+                            </h3>
+                            <ul class="text-slate-300 text-sm space-y-3 list-disc pl-4">
+                                <li>Dificuldade de captação de Terra Firme</li>
+                                <li>Reforma nas usinas de Marituba e Jurunas</li>
+                            </ul>
                         </div>
-                    </details>
+
+                        <div class="glass-panel glow-emerald p-6 rounded-3xl border-l-4 border-emerald-500">
+                            <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                <i data-lucide="zap" class="text-emerald-400"></i> Próximos Passos
+                            </h3>
+                            
+                            <h4 class="text-[10px] font-black text-slate-500 uppercase mb-2 mt-4 tracking-widest">Ações planejadas:</h4>
+                            <ul class="text-slate-300 text-sm space-y-2 list-disc pl-4 mb-4">
+                                <li>Reforçar comunicação com: Mensagens, Cards explicativos (como captar)</li>
+                                <li>Relembrar necessidade de: Responder grupos, Focar na central, Criar novo material, mesmo já tendo enviado antes</li>
+                            </ul>
+
+                            <h4 class="text-[10px] font-black text-slate-500 uppercase mb-2 mt-6 tracking-widest">Leitura final:</h4>
+                            <ul class="text-slate-300 text-sm space-y-2 list-disc pl-4">
+                                <li>Queda de números pode ser: Operacional (falta de foco/adesão), Contextual (equipes deslocadas para ações)</li>
+                                <li>Um reforço leve de comunicação pode ajudar a recuperar os resultados.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </main>
