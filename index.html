@@ -48,8 +48,8 @@
 
         /* Estilos de Detalhes Técnicos */
         .detail-row { border-left: 2px solid rgba(255,255,255,0.1); padding-left: 12px; margin-bottom: 12px; }
-        .detail-label { font-size: 9px; text-transform: uppercase; font-weight: 900; color: #94a3b8; letter-spacing: 0.1em; margin-bottom: 4px; }
-        .detail-value { font-size: 13px; color: #f1f5f9; line-height: 1.5; }
+        .detail-label { font-size: 9px; text-transform: uppercase; font-weight: 900; color: #94a3b8; letter-spacing: 0.1em; margin-bottom: 2px; }
+        .detail-value { font-size: 13px; color: #f1f5f9; line-height: 1.4; }
         
         details summary::-webkit-details-marker { display: none; }
     </style>
@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="glass-panel glow-emerald p-8 rounded-3xl overflow-x-auto">
-                            <h3 class="text-xl font-bold text-white mb-4">Principais Avanços dos Canais</h3>
+                            <h3 class="text-xl font-bold text-white mb-4">Avanços Consolidados de Base</h3>
                             <table class="w-full text-left text-sm min-w-[400px]">
                                 <thead>
                                     <tr class="text-slate-500 border-b border-white/10 uppercase text-[10px] font-black"><th class="pb-3">Usina</th><th class="pb-3">Início</th><th class="pb-3">Atual</th><th class="pb-3 text-right">Impacto</th></tr>
@@ -178,199 +178,176 @@
 
             <div id="tab-monitoramento" class="tab-content space-y-6">
                 
-                <div class="glass-panel glow-emerald p-6 sm:p-8 rounded-3xl flex flex-col lg:flex-row gap-8 border-l-4 border-emerald-500">
-                    <div class="lg:w-1/3 flex flex-col justify-between space-y-6">
-                        <div>
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <h4 class="text-2xl font-black text-white uppercase tracking-tighter">Marituba</h4>
-                                <span class="bg-emerald-500/20 text-emerald-400 text-[9px] px-2.5 py-1 rounded-lg font-bold uppercase tracking-widest">Crescimento</span>
-                            </div>
-                            <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Entradas (Foco Principal)</p>
-                        </div>
-                        <div>
-                            <span class="text-5xl font-black text-white tracking-tight">623</span>
-                            <span class="text-sm text-slate-400 ml-1">pessoas</span>
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
-                            <div class="flex gap-2 flex-wrap">
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-emerald-400">+225</b></span>
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-emerald-400">+128</b></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i> Origem e Contexto</h5>
-                        <div class="space-y-4">
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Origem das entradas</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Observações relevantes</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="activity" class="w-4 h-4 text-emerald-400"></i> Evolução Operacional</h5>
-                        <div class="space-y-3">
-                            <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Está finalizando uma reforma.</p></div>
-                            <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value italic opacity-50">Não informado</p></div>
-                            <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value italic opacity-50">Não informado</p></div>
-                        </div>
-                    </div>
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl mb-8 border-l-4 border-blue-500">
+                    <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i data-lucide="bar-chart-2" class="text-blue-400"></i> Entradas & Monitoramento Operacional
+                    </h3>
+                    <p class="text-slate-300 text-sm">Resumo da evolução da captação de base e pontos focais de cada usina no período analisado.</p>
                 </div>
 
-                <div class="glass-panel glow-blue p-6 sm:p-8 rounded-3xl flex flex-col lg:flex-row gap-8 border-l-4 border-blue-500">
-                    <div class="lg:w-1/3 flex flex-col justify-between space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <div class="glass-panel glow-blue p-6 sm:p-8 rounded-3xl border-t-4 border-blue-500 flex flex-col justify-between">
                         <div>
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <h4 class="text-2xl font-black text-white uppercase tracking-tighter">Icuí</h4>
-                                <span class="bg-blue-500/20 text-blue-400 text-[9px] px-2.5 py-1 rounded-lg font-bold uppercase tracking-widest">Crescimento Lento</span>
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <h4 class="text-2xl font-black text-white">Icuí</h4>
+                                    <p class="text-xs text-slate-500 mt-1 uppercase tracking-widest">Entradas na Central</p>
+                                </div>
+                                <span class="bg-blue-500/20 text-blue-400 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Crescimento Lento</span>
                             </div>
-                            <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Entradas (Foco Principal)</p>
-                        </div>
-                        <div>
-                            <span class="text-5xl font-black text-white tracking-tight">1.252</span>
-                            <span class="text-sm text-slate-400 ml-1">pessoas</span>
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
-                            <div class="flex gap-2 flex-wrap">
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Jan: <b class="text-emerald-400">+248</b></span>
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-emerald-400">+8</b></span>
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-emerald-400">+72</b></span>
+                            
+                            <div class="mb-6">
+                                <span class="text-4xl font-black text-white">1.252</span> <span class="text-sm text-slate-400 ml-1">pessoas totais</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-blue-400"></i> Origem e Contexto</h5>
-                        <div class="space-y-4">
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Origem das entradas</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Observações relevantes</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="activity" class="w-4 h-4 text-blue-400"></i> Evolução Operacional</h5>
-                        <div class="space-y-3">
-                            <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value italic opacity-50">Não informado</p></div>
-                            <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value italic opacity-50">Não informado</p></div>
-                            <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-yellow-400 font-bold">Poucas captações comparadas aos outros meses.</p></div>
-                        </div>
-                    </div>
-                </div>
+                            
+                            <div class="space-y-2 mb-8">
+                                <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
+                                <div class="flex gap-2 flex-wrap">
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Jan: <b class="text-blue-400">+248</b></span>
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-blue-400">+8</b></span>
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-blue-400">+72</b></span>
+                                </div>
+                            </div>
 
-                <div class="glass-panel glow-yellow p-6 sm:p-8 rounded-3xl flex flex-col lg:flex-row gap-8 border-l-4 border-yellow-500">
-                    <div class="lg:w-1/3 flex flex-col justify-between space-y-6">
-                        <div>
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <h4 class="text-2xl font-black text-white uppercase tracking-tighter">Cabanagem</h4>
-                                <span class="bg-yellow-500/20 text-yellow-400 text-[9px] px-2.5 py-1 rounded-lg font-bold uppercase tracking-widest">Queda / Estagnação</span>
-                            </div>
-                            <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Entradas (Foco Principal)</p>
-                        </div>
-                        <div>
-                            <span class="text-5xl font-black text-white tracking-tight">1.186</span>
-                            <span class="text-sm text-slate-400 ml-1">pessoas</span>
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
-                            <div class="flex gap-2 flex-wrap">
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Jan: <b class="text-emerald-400">+86</b></span>
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-emerald-400">+47</b></span>
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-emerald-400">+56</b></span>
+                            <div class="space-y-4 pt-6 border-t border-white/5">
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-blue-400">Crescimento lento.</p></div>
+                                <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-yellow-400 font-bold">Poucas captações comparadas aos outros meses.</p></div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-yellow-400"></i> Origem e Contexto</h5>
-                        <div class="space-y-4">
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Origem das entradas</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Observações relevantes</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="activity" class="w-4 h-4 text-yellow-400"></i> Evolução Operacional</h5>
-                        <div class="space-y-3">
-                            <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Encontra-se com "estagnação".</p></div>
-                            <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value italic opacity-50">Não informado</p></div>
-                            <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-red-400 font-bold">Poucas entradas na Central.</p></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="glass-panel glow-red p-6 sm:p-8 rounded-3xl flex flex-col lg:flex-row gap-8 border-l-4 border-red-500">
-                    <div class="lg:w-1/3 flex flex-col justify-between space-y-6">
+                    <div class="glass-panel glow-red p-6 sm:p-8 rounded-3xl border-t-4 border-red-500 flex flex-col justify-between">
                         <div>
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <h4 class="text-2xl font-black text-white uppercase tracking-tighter">Terra Firme</h4>
-                                <span class="bg-red-500/20 text-red-400 text-[9px] px-2.5 py-1 rounded-lg font-bold uppercase tracking-widest">Queda</span>
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <h4 class="text-2xl font-black text-white">Jurunas</h4>
+                                    <p class="text-xs text-slate-500 mt-1 uppercase tracking-widest">Entradas na Central</p>
+                                </div>
+                                <span class="bg-red-500/20 text-red-400 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Queda</span>
                             </div>
-                            <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Entradas (Foco Principal)</p>
-                        </div>
-                        <div>
-                            <span class="text-5xl font-black text-white tracking-tight">79</span>
-                            <span class="text-sm text-slate-400 ml-1">pessoas</span>
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
-                            <div class="flex gap-2 flex-wrap">
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-emerald-400">+21</b></span>
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-emerald-400">+31</b></span>
+                            
+                            <div class="mb-6">
+                                <span class="text-4xl font-black text-white">1.300</span> <span class="text-sm text-slate-400 ml-1">pessoas totais</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-red-400"></i> Origem e Contexto</h5>
-                        <div class="space-y-4">
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Origem das entradas</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Observações relevantes</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="activity" class="w-4 h-4 text-red-400"></i> Evolução Operacional</h5>
-                        <div class="space-y-3">
-                            <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Poucas entradas na central, maior ativação na entrada do canal.</p></div>
-                            <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value text-slate-300">Dificuldade de crescimento.</p></div>
-                            <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-red-400 font-bold">Mesmo com conversas e reunião, ainda não conseguimos manter um fluxo de captações.</p></div>
-                        </div>
-                    </div>
-                </div>
+                            
+                            <div class="space-y-2 mb-8">
+                                <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
+                                <div class="flex gap-2 flex-wrap">
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Jan: <b class="text-emerald-400">+351</b></span>
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-emerald-400">+16</b></span>
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-emerald-400">+20</b></span>
+                                </div>
+                            </div>
 
-                <div class="glass-panel glow-red p-6 sm:p-8 rounded-3xl flex flex-col lg:flex-row gap-8 border-l-4 border-red-500">
-                    <div class="lg:w-1/3 flex flex-col justify-between space-y-6">
-                        <div>
-                            <div class="flex flex-wrap items-center gap-3 mb-2">
-                                <h4 class="text-2xl font-black text-white uppercase tracking-tighter">Jurunas</h4>
-                                <span class="bg-red-500/20 text-red-400 text-[9px] px-2.5 py-1 rounded-lg font-bold uppercase tracking-widest">Queda</span>
-                            </div>
-                            <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Entradas (Foco Principal)</p>
-                        </div>
-                        <div>
-                            <span class="text-5xl font-black text-white tracking-tight">1.300</span>
-                            <span class="text-sm text-slate-400 ml-1">pessoas</span>
-                        </div>
-                        <div class="space-y-2">
-                            <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
-                            <div class="flex gap-2 flex-wrap">
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Jan: <b class="text-emerald-400">+351</b></span>
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-emerald-400">+16</b></span>
-                                <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-emerald-400">+20</b></span>
+                            <div class="space-y-4 pt-6 border-t border-white/5">
+                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Finalizando reforma.</p></div>
+                                <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value text-slate-300">Cresceu ao longo dos meses.</p></div>
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda.</p></div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-red-400"></i> Origem e Contexto</h5>
-                        <div class="space-y-4">
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Origem das entradas</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                            <div><p class="text-[9px] text-slate-500 font-black uppercase mb-1">Observações relevantes</p><p class="text-sm text-slate-400 italic opacity-50">Não informado</p></div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 space-y-6">
-                        <h5 class="text-[10px] text-slate-400 font-black uppercase tracking-widest flex items-center gap-2"><i data-lucide="activity" class="w-4 h-4 text-red-400"></i> Evolução Operacional</h5>
-                        <div class="space-y-3">
-                            <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Finalizando reforma.</p></div>
-                            <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value text-slate-300">Cresceu ao longo dos meses.</p></div>
-                            <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value italic opacity-50">Não informado</p></div>
-                        </div>
-                    </div>
-                </div>
 
+                    <div class="glass-panel glow-yellow p-6 sm:p-8 rounded-3xl border-t-4 border-yellow-500 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <h4 class="text-2xl font-black text-white">Cabanagem</h4>
+                                    <p class="text-xs text-slate-500 mt-1 uppercase tracking-widest">Entradas na Central</p>
+                                </div>
+                                <span class="bg-yellow-500/20 text-yellow-400 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Estagnação / Queda</span>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <span class="text-4xl font-black text-white">1.186</span> <span class="text-sm text-slate-400 ml-1">pessoas totais</span>
+                            </div>
+                            
+                            <div class="space-y-2 mb-8">
+                                <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
+                                <div class="flex gap-2 flex-wrap">
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Jan: <b class="text-yellow-400">+86</b></span>
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-yellow-400">+47</b></span>
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-yellow-400">+56</b></span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4 pt-6 border-t border-white/5">
+                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Encontra-se com "estagnação".</p></div>
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda de captações.</p></div>
+                                <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-red-400 font-bold">Poucas entradas na Central.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel glow-red p-6 sm:p-8 rounded-3xl border-t-4 border-red-500 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <h4 class="text-2xl font-black text-white">Terra Firme</h4>
+                                    <p class="text-xs text-slate-500 mt-1 uppercase tracking-widest">Entradas na Central</p>
+                                </div>
+                                <span class="bg-red-500/20 text-red-400 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Queda</span>
+                            </div>
+                            
+                            <div class="mb-6 flex items-end gap-3">
+                                <div>
+                                    <span class="text-4xl font-black text-white">79</span> <span class="text-sm text-slate-400 ml-1">pessoas</span>
+                                </div>
+                                <div class="pb-1 border-l border-white/10 pl-3">
+                                    <p class="text-[9px] text-slate-500 font-black uppercase">Canal Secundário</p>
+                                    <p class="text-sm font-bold text-blue-400">+1.000 pessoas</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2 mb-8">
+                                <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
+                                <div class="flex gap-2 flex-wrap">
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-emerald-400">+21</b></span>
+                                    <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-emerald-400">+31</b></span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4 pt-6 border-t border-white/5">
+                                <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Poucas entradas na central, maior ativação na entrada do canal.</p></div>
+                                <div class="detail-row"><p class="detail-label">Evolução</p><p class="detail-value text-slate-300">Dificuldade de crescimento.</p></div>
+                                <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-red-400">Queda.</p></div>
+                                <div class="detail-row"><p class="detail-label">Pontos de Atenção</p><p class="detail-value text-red-400 font-bold">Mesmo com conversas e reunião, ainda não conseguimos manter um fluxo de captações.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel glow-emerald p-6 sm:p-8 rounded-3xl border-t-4 border-emerald-500 flex flex-col justify-between md:col-span-2">
+                        <div>
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <h4 class="text-2xl font-black text-white">Marituba</h4>
+                                    <p class="text-xs text-slate-500 mt-1 uppercase tracking-widest">Entradas na Central</p>
+                                </div>
+                                <span class="bg-emerald-500/20 text-emerald-400 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Crescimento</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
+                                <div>
+                                    <div class="mb-4">
+                                        <span class="text-4xl font-black text-white">623</span> <span class="text-sm text-slate-400 ml-1">pessoas totais</span>
+                                    </div>
+                                    <div class="space-y-2 mb-8">
+                                        <p class="text-[9px] text-slate-500 font-black uppercase tracking-widest">Entradas por mês</p>
+                                        <div class="flex gap-2 flex-wrap">
+                                            <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Fev: <b class="text-emerald-400">+225</b></span>
+                                            <span class="bg-white/5 border border-white/10 text-slate-300 text-xs px-2.5 py-1 rounded-lg">Mar: <b class="text-emerald-400">+128</b></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4 md:border-l md:border-white/5 md:pl-8">
+                                    <div class="detail-row"><p class="detail-label">Situação Atual</p><p class="detail-value text-white">Está finalizando uma reforma.</p></div>
+                                    <div class="detail-row"><p class="detail-label">Tendência</p><p class="detail-value text-emerald-400">Crescimento.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div id="tab-comunidades" class="tab-content space-y-8">
@@ -518,6 +495,20 @@
     <script>
     const CONFIG = { senha: "usinas2026" };
     const $ = id => document.getElementById(id);
+
+    function toggleDetails(id) {
+        const el = $("det-" + id);
+        const btn = $("btn-" + id);
+        if (el.classList.contains('hidden')) {
+            el.classList.remove('hidden');
+            btn.textContent = "Recolher Relatório";
+            btn.classList.add('text-white', 'bg-white/20');
+        } else {
+            el.classList.add('hidden');
+            btn.textContent = "Ver Monitoramento";
+            btn.classList.remove('text-white', 'bg-white/20');
+        }
+    }
 
     function checkPassword() {
         if ($("password-input").value === CONFIG.senha) {
