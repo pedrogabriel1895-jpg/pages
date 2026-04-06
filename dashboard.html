@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Leads</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #0f172a;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    canvas {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>📊 Dashboard de Leads</h1>
+
+<div class="filters">
+  <input type="date" id="startDate">
+  <input type="date" id="endDate">
+  <button onclick="loadData()">Filtrar</button>
+</div>
+
+<div id="projects" class="projects"></div>
+
+<script>
+  const SUPABASE_URL = "const SUPABASE_BASE_URL = "https://database.tnledu.shop/rest/v1/";
+";
+  const SUPABASE_KEY = "const ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzE1MDUwODAwLAogICJleHAiOiAxODcyODE3MjAwCn0.FRcy1kxU_0vQ4JBPnkcxZPfc_RFOFKMGkj00MvBRmKM"; 
+";
+
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  async function loadData() {
+    document.getElementById("projects").innerHTML = "Carregando...";
+
+    let { data, error } = await supabase
+      .from('leads')
+      .select('*')
+      .eq('considerar', 'true');
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    const start = document.getElementById("startDate").value;
+    const end = document.getElementById("endDate").value;
+
+    const filtered = data.filter(item => {
+      const date = new Date(item.first_message_at * 1000);
+
+      if (start && date < new Date(start)) return false;
+      if (end && date > new Date(end)) return false;
+
+      return true;
+    });
+
+    renderProjects(filtered);
+  }
+
+  function groupByProject(data) {
+    const map = {};
+
+    data.forEach(item => {
+      if (!map[item.projeto]) map[item.projeto] = [];
+      map[item.projeto].push(item);
+    });
+
+    return map;
+  }
+
+  function renderProjects(data) {
+    const container = document.getElementById("projects");
+    container.innerHTML = "";
+
+    const projects = groupByProject(data);
+
+    Object.keys(projects).forEach(project => {
+      const leads = projects[project];
+
+      const div = document.createElement("div");
+      div.className = "card";
+
+      const title = document.createElement("h3");
+      title.innerText = project;
+
+      const total = document.createElement("p");
+      total.innerText = `Total de leads: ${leads.length}`;
+
+      const canvas = document.createElement("canvas");
+
+      div.appendChild(title);
+      div.appendChild(total);
+      div.appendChild(canvas);
+
+      container.appendChild(div);
+
+      renderChart(canvas, leads);
+    });
+  }
+
+  function renderChart(canvas, leads) {
+    const counts = {};
+
+    leads.forEach(l => {
+      const date = new Date(l.first_message_at * 1000);
+      const key = date.toISOString().split('T')[0];
+
+      counts[key] = (counts[key] || 0) + 1;
+    });
+
+    const labels = Object.keys(counts).sort();
+    const values = labels.map(l => counts[l]);
+
+    new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Entradas',
+          data: values,
+          fill: false,
+          tension: 0.3
+        }]
+      }
+    });
+  }
+
+  // load inicial
+  loadData();
+</script>
+
+</body>
+</html>
