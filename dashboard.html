@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard Leads</title>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
@@ -43,6 +44,16 @@
       border-radius: 10px;
       padding: 10px;
     }
+
+    .debug {
+      background: #111827;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      max-height: 300px;
+      overflow: auto;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
@@ -58,6 +69,8 @@
 
 <div id="projects" class="projects"></div>
 
+<div id="debug" class="debug"></div>
+
 <script>
   const SUPABASE_URL = "const SUPABASE_BASE_URL = "https://database.tnledu.shop/rest/v1/";
 ";
@@ -71,18 +84,34 @@
 
     let { data, error } = await supabase
       .from('leads')
-      .select('*')
-      .eq('considerar', 'true');
+      .select('*'); // 🔥 SEM FILTRO AQUI
 
+    // 🔥 mostra erro na tela
     if (error) {
-      console.error(error);
+      document.getElementById("debug").innerHTML =
+        "<b>ERRO:</b><pre>" + JSON.stringify(error, null, 2) + "</pre>";
       return;
     }
+
+    // 🔍 DEBUG DOS DADOS
+    document.getElementById("debug").innerHTML =
+      "<b>RAW DATA:</b><pre>" + JSON.stringify(data.slice(0, 10), null, 2) + "</pre>";
+
+    // 🔥 FILTRO BLINDADO (considerar)
+    const onlyValid = data.filter(item =>
+      String(item.considerar).trim().toLowerCase() === 'true'
+    );
+
+    // 🔍 DEBUG FILTRADO
+    document.getElementById("debug").innerHTML +=
+      "<br><b>FILTRADOS (considerar=true):</b> " + onlyValid.length;
 
     const start = document.getElementById("startDate").value;
     const end = document.getElementById("endDate").value;
 
-    const filtered = data.filter(item => {
+    const filtered = onlyValid.filter(item => {
+      if (!item.first_message_at) return false;
+
       const date = new Date(item.first_message_at * 1000);
 
       if (start && date < new Date(start)) return false;
