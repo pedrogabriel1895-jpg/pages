@@ -1,199 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard Leads</title>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-
-  <style>
-    body {
-      font-family: Arial;
-      padding: 20px;
-      background: #0f172a;
-      color: white;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    .filters {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      justify-content: center;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    canvas {
-      background: white;
-      border-radius: 10px;
-      padding: 10px;
-    }
-
-    .debug {
-      background: #111827;
-      padding: 10px;
-      border-radius: 8px;
-      font-size: 12px;
-      max-height: 300px;
-      overflow: auto;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Leads</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 </head>
+<body class="bg-gray-100 text-gray-800 font-sans">
 
-<body>
+    <div class="max-w-6xl mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6 text-blue-800">Dashboard de Entradas de Leads</h1>
 
-<h1>📊 Dashboard de Leads</h1>
+        <div class="bg-white p-4 rounded-lg shadow-md mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <label class="block text-sm font-semibold text-gray-600 mb-1">Projeto (ID):</label>
+                <select id="projectSelect" class="w-full border rounded p-2 bg-gray-50" onchange="updateDashboard()">
+                    <option value="all">Todos os Projetos</option>
+                    </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-600 mb-1">Data Início:</label>
+                <input type="date" id="startDate" class="w-full border rounded p-2 bg-gray-50" onchange="updateDashboard()">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-600 mb-1">Data Fim:</label>
+                <input type="date" id="endDate" class="w-full border rounded p-2 bg-gray-50" onchange="updateDashboard()">
+            </div>
+        </div>
 
-<div class="filters">
-  <input type="date" id="startDate">
-  <input type="date" id="endDate">
-  <button onclick="loadData()">Filtrar</button>
-</div>
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-blue-600">
+            <h2 class="text-lg font-semibold text-gray-600">Total de Leads Ativos</h2>
+            <p id="totalLeads" class="text-4xl font-bold text-blue-700 mt-2">0</p>
+            <p class="text-sm text-gray-500 mt-1">Considerando filtro atual de projeto e período</p>
+        </div>
 
-<div id="projects" class="projects"></div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold text-gray-600 mb-4">Volume de Entradas ao Longo do Tempo</h2>
+            <canvas id="leadsChart" height="100"></canvas>
+        </div>
+    </div>
 
-<div id="debug" class="debug"></div>
+    <script>
+        let allData = [];
+        let chartInstance = null;
 
-<script>
-  const SUPABASE_URL = "const SUPABASE_BASE_URL = "https://database.tnledu.shop/rest/v1/";
-";
-  const SUPABASE_KEY = "const ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzE1MDUwODAwLAogICJleHAiOiAxODcyODE3MjAwCn0.FRcy1kxU_0vQ4JBPnkcxZPfc_RFOFKMGkj00MvBRmKM"; 
-";
+        // Inicializar Gráfico Vazio
+        const ctx = document.getElementById('leadsChart').getContext('2d');
+        chartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Novos Leads',
+                    data: [],
+                    borderColor: '#2563EB',
+                    backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true, ticks: { stepSize: 1 } }
+                }
+            }
+        });
 
-  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        // Carregar e processar o CSV
+        Papa.parse('leads_rows.csv', {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                const data = results.data;
+                
+                // Limpar e formatar dados
+                allData = data.filter(row => row.considerar === 'true' && row.first_message_at).map(row => {
+                    // first_message_at parece ser em segundos (unix), multiplicar por 1000 para milissegundos
+                    const dateObj = new Date(parseInt(row.first_message_at) * 1000);
+                    return {
+                        projeto: row.projeto,
+                        dateObj: dateObj,
+                        // String no formato YYYY-MM-DD para agrupamento
+                        dateStr: dateObj.toISOString().split('T')[0] 
+                    };
+                });
 
-  async function loadData() {
-    document.getElementById("projects").innerHTML = "Carregando...";
+                // Preencher o select de projetos
+                const projectSelect = document.getElementById('projectSelect');
+                const uniqueProjects = [...new Set(allData.map(d => d.projeto))];
+                uniqueProjects.forEach(proj => {
+                    const option = document.createElement('option');
+                    option.value = proj;
+                    option.text = proj;
+                    projectSelect.appendChild(option);
+                });
 
-    let { data, error } = await supabase
-      .from('leads')
-      .select('*'); // 🔥 SEM FILTRO AQUI
+                // Atualizar com os dados iniciais
+                updateDashboard();
+            },
+            error: function(err) {
+                console.error("Erro ao ler o CSV: ", err);
+                alert("Não foi possível carregar o leads_rows.csv. Certifique-se de que o arquivo está na mesma pasta que o index.html!");
+            }
+        });
 
-    // 🔥 mostra erro na tela
-    if (error) {
-      document.getElementById("debug").innerHTML =
-        "<b>ERRO:</b><pre>" + JSON.stringify(error, null, 2) + "</pre>";
-      return;
-    }
+        // Função para filtrar e atualizar os componentes
+        function updateDashboard() {
+            const selectedProj = document.getElementById('projectSelect').value;
+            const startDateStr = document.getElementById('startDate').value;
+            const endDateStr = document.getElementById('endDate').value;
 
-    // 🔍 DEBUG DOS DADOS
-    document.getElementById("debug").innerHTML =
-      "<b>RAW DATA:</b><pre>" + JSON.stringify(data.slice(0, 10), null, 2) + "</pre>";
+            // Filtro de Projeto
+            let filteredData = allData;
+            if (selectedProj !== 'all') {
+                filteredData = filteredData.filter(d => d.projeto === selectedProj);
+            }
 
-    // 🔥 FILTRO BLINDADO (considerar)
-    const onlyValid = data.filter(item =>
-      String(item.considerar).trim().toLowerCase() === 'true'
-    );
+            // Filtros de Data
+            if (startDateStr) {
+                const start = new Date(startDateStr);
+                // Garantir o início do dia
+                start.setHours(0, 0, 0, 0); 
+                filteredData = filteredData.filter(d => d.dateObj >= start);
+            }
+            if (endDateStr) {
+                const end = new Date(endDateStr);
+                // Fim do dia
+                end.setHours(23, 59, 59, 999); 
+                filteredData = filteredData.filter(d => d.dateObj <= end);
+            }
 
-    // 🔍 DEBUG FILTRADO
-    document.getElementById("debug").innerHTML +=
-      "<br><b>FILTRADOS (considerar=true):</b> " + onlyValid.length;
+            // Atualiza KPI Total
+            document.getElementById('totalLeads').innerText = filteredData.length;
 
-    const start = document.getElementById("startDate").value;
-    const end = document.getElementById("endDate").value;
+            // Agrupar por data para o gráfico
+            const countsByDate = {};
+            filteredData.forEach(d => {
+                countsByDate[d.dateStr] = (countsByDate[d.dateStr] || 0) + 1;
+            });
 
-    const filtered = onlyValid.filter(item => {
-      if (!item.first_message_at) return false;
+            // Ordenar as datas
+            const sortedDates = Object.keys(countsByDate).sort();
+            const counts = sortedDates.map(date => countsByDate[date]);
 
-      const date = new Date(item.first_message_at * 1000);
+            // Formatar datas para exibir bonito (DD/MM/YYYY)
+            const labelsFormatadas = sortedDates.map(d => {
+                const [year, month, day] = d.split('-');
+                return `${day}/${month}/${year}`;
+            });
 
-      if (start && date < new Date(start)) return false;
-      if (end && date > new Date(end)) return false;
-
-      return true;
-    });
-
-    renderProjects(filtered);
-  }
-
-  function groupByProject(data) {
-    const map = {};
-
-    data.forEach(item => {
-      if (!map[item.projeto]) map[item.projeto] = [];
-      map[item.projeto].push(item);
-    });
-
-    return map;
-  }
-
-  function renderProjects(data) {
-    const container = document.getElementById("projects");
-    container.innerHTML = "";
-
-    const projects = groupByProject(data);
-
-    Object.keys(projects).forEach(project => {
-      const leads = projects[project];
-
-      const div = document.createElement("div");
-      div.className = "card";
-
-      const title = document.createElement("h3");
-      title.innerText = project;
-
-      const total = document.createElement("p");
-      total.innerText = `Total de leads: ${leads.length}`;
-
-      const canvas = document.createElement("canvas");
-
-      div.appendChild(title);
-      div.appendChild(total);
-      div.appendChild(canvas);
-
-      container.appendChild(div);
-
-      renderChart(canvas, leads);
-    });
-  }
-
-  function renderChart(canvas, leads) {
-    const counts = {};
-
-    leads.forEach(l => {
-      const date = new Date(l.first_message_at * 1000);
-      const key = date.toISOString().split('T')[0];
-
-      counts[key] = (counts[key] || 0) + 1;
-    });
-
-    const labels = Object.keys(counts).sort();
-    const values = labels.map(l => counts[l]);
-
-    new Chart(canvas, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'Entradas',
-          data: values,
-          fill: false,
-          tension: 0.3
-        }]
-      }
-    });
-  }
-
-  // load inicial
-  loadData();
-</script>
-
+            // Atualizar o gráfico
+            chartInstance.data.labels = labelsFormatadas;
+            chartInstance.data.datasets[0].data = counts;
+            chartInstance.update();
+        }
+    </script>
 </body>
 </html>
