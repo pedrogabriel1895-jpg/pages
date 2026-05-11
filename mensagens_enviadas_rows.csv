@@ -1,0 +1,642 @@
+id,projeto,campanha,comunidade,comunidade_id,id_mensagem,texto_preview,tipo,data_evento,remetente_nome,remetente_id,responsavel_nome,created_at
+2,Testes do Sendflow,#1 Teste,#1 Teste,120363409597036474@g.us,3EB0FD218E67D692149D7C9461AFF0570CD81669,Opa minha joia,mensagem simples,2026-04-17 22:25:25.209+00,Central de Engajamento,28806983217244@lid,Central,2026-04-18 01:37:29.964716+00
+3,Testes do Sendflow,#1 Teste,#1 Teste,120363409597036474@g.us,3EB089261BBBC062AE7387FDB82C4938EBB32618,📊 ENQUETE: Vamos ver (Opções: Eita | Ok),enquete,2026-04-17 22:39:35.773+00,Central de Engajamento,28806983217244@lid,Central,2026-04-18 01:39:35.907327+00
+4,Testes do Sendflow,#1 Teste,#1 Teste,120363409597036474@g.us,3EB0E91AE668C35F3477E31F0664AA1AD6C5E76D,Mais um teste,mensagem simples,2026-04-19 11:03:45.289+00,Central de Engajamento,28806983217244@lid,Central,2026-04-19 14:05:10.848911+00
+5,Testes do Sendflow,#1 Teste,#1 Teste,120363409597036474@g.us,3EB04BA0B3B03551D9BF7C4746EB7DB61047281B,Oia eu de novo,mensagem simples,2026-04-19 11:06:19.559+00,Central de Engajamento,28806983217244@lid,Central,2026-04-19 14:06:20.019605+00
+6,Testes do Sendflow,#1 Teste,#1 Teste,120363409597036474@g.us,3EB041C3BDB65238A8E5839C93E20197B17498C3,Vamos testar,mensagem simples,2026-04-20 01:48:20.059+00,Central de Engajamento,28806983217244@lid,Central de Engajamento,2026-04-20 04:48:20.561297+00
+7,Escalada,Conexão Escalada - Nível 2,Conexão Escalada - Nível 2,120363407337623196@g.us,ACF778BD2C8B323FB2948801F715A092,"Bom dia, Camila! Vou te enviar uma mensagem e podemos solucionar isso!!",mensagem simples,2026-04-20 10:27:18.163+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-20 13:27:18.849424+00
+8,Escalada,Conexão Escalada - Nível 2,Conexão Escalada - Nível 2,120363407337623196@g.us,ACA6818EDA7262CF5E4A0AEB205A9523,"Que massa, Ramon! Realmente esses momentos nos ajudam a se conectar mais. Faz toda a diferença!",mensagem simples,2026-04-20 10:28:16.673+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-20 13:28:17.571002+00
+9,Escalada,Conexão Escalada - Nível 2,Conexão Escalada - Nível 2,120363407337623196@g.us,3EB0E19D530AD9E9792E5B,"Já começamos a semana por aqui a todo vapor e uma segunda-feira sem plano é só mais um dia no calendário. 🗓️ 
+
+Muita gente abre a plataforma e trava sem saber como mudar o jogo da rotina, é conhecer e o primeiro passo para mudar isso, é conhecendo métodos, hábidos...
+
+*Missão check-in (+10 pontos):*
+1️⃣ Acesse o post: https://escaladaedu.circle.so/c/novidades/ultima-semana-do-mes-flash
+
+2️⃣ Comente qual a sua estratégia de organização, hábito ou método que você utiliza (vale tudo, cronograma, papel...).
+
+3️⃣ Poste o seu comentário e já estará valendo!
+
+🛑 Regra: Válido até 22/04!
+
+Não deixa pra amanhã e conta pra gente aqui: qual dica de organização você descobriu hoje? 👇",mensagem simples,2026-04-20 10:31:18.52+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-20 13:31:19.145935+00
+10,Escalada,Rota de Crescimento - Nível 3,Rota de Crescimento - Nível 3,120363423283283910@g.us,3EB0F6FF9379FEE1995A0A,"*Nessa última semana do Mês Flash, essa é a estratégia que vai colocar você no Top 20!* 🏆
+
+Esses mês vocês descobriram que a constância não é sobre dar um salto impossível, é sobre ser *1% melhor a cada dia*. E a nossa amiga Camila trouxe essa reflexão massa! 
+
+*Sua missão de hoje (+15 pontos):*
+
+1️⃣ Entre na plataforma e identifique uma trilha ou desafio que você estava enrolando para começar.
+
+2️⃣ Realize a atividade válida (um vídeo, um quiz…).
+
+3️⃣ Vá ao post e comente: *""Hoje o meu 1% foi [nome da atividade que você fez]""*.
+
+🛑 *Regra:* Válido até 22/04.
+
+*Conta pra gente aqui, qual foi o tema do seu 1% hoje?* 👇",mensagem simples,2026-04-20 10:39:20.687+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-20 13:39:23.385893+00
+11,Escalada,Conselho Escalada - Nível 5,Conselho Escalada - Nível 5,120363425561018159@g.us,3EB06444BD37ABA768687A,"Bom dia, grandes mentes! 🚀
+
+O que você aprendeu aqui é o combustível, e o Escalada pode ser a sua pista de decolagem. Sua jornada de impacto está só começando! 
+
+🎯 *Missão da semana (+15 pontos):*
+
+1️⃣ Poste na plataforma: O que você quer ser?
+
+2️⃣ Use a hashtag #metafutura. No texto, conte qual é o seu objetivo e qual é o seu plano de ação para conquistar essa meta.
+
+3️⃣ Vá ao post de um colega, leia a meta dele e comente como esse objetivo te inspira!
+
+🛑 Regra: Para pontuar, adicione #metafutura. Válido até 22/04.
+
+Postou o seu objetivo? Manda o link aqui no grupo e diz pra gente: qual é a sua meta principal? 👇",mensagem simples,2026-04-20 10:59:16.031+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-20 13:59:16.457602+00
+12,Escalada,Laboratório de Projetos - Nível 4,Laboratório de Projetos - Nível 4,120363406643406079@g.us,3EB079051ED4469169AFA5,"Fala galera, hora de analisar realidade ao seu redor e treinar a sua mira. Sustentabilidade não é apenas discurso, é prática aplicada!
+
+🎯 *MISSÃO (+15 pontos):*
+
+1️⃣ Observe uma pequena ação ou hábito sustentável na sua casa ou comunidade (ex: reciclagem, consumo consciente, economia de água).
+
+2️⃣ Poste na plataforma com a hashtag #FuturoSustentavel. Explique como você solucionaria ou melhoraria esse impacto através de uma ideia prática.
+
+🛑 Regra: Para pontuar, adicione a hashtag #FuturoSustentavel. Válido até 22/04.
+
+Postou sua ideia? Manda o link aqui e diz: qual hábito sustentável você trouxe para o seu projeto? 👇",mensagem simples,2026-04-20 11:12:38.971+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-20 14:12:39.593462+00
+13,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0CEB4BC028612B0E546,"Boraaa, meu povo! Deu meio-dia e eu já tô sentindo o cheiro do almoço daqui, visse?
+
+Mas antes de focar no prato, vim dar um recado: amanhã é feriado, mas pra quem tem a missão de ver Pernambuco brilhar, o trabalho não para! Tiradentes que nos perdoe, mas essa folga é só pra tu chegar com o tanque cheio e muita energia no nosso encontro de quarta-feira. Tá sabendo, né?
+Então cuida em almoçar bem, que a gente segue firme por aqui. Vamos juntos! 🚀 #PEpraFrente",mensagem simples,2026-04-20 12:05:28.561+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-20 15:05:29.165233+00
+14,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB0221862758870376F55,"Meio-dia e eu já tô sentindo o cheiro do almoço daqui! 🍛🤤 Garante logo o teu prato e simbora de foco total!
+
+Amanhã é feriado, mas o nosso sonho de mudar Pernambuco não tira folga. Aproveita esse descanso de amanhã pra pegar aquele fôlego que faltava pra gente mostrar que a nossa força é diferente. Vamos pra cima com João! #PEpraFrente",mensagem simples,2026-04-20 12:05:47.602+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-20 15:05:48.376733+00
+15,Pará,Engaja 2.0,Engaja 2.0 (Azul),120363422002705740@g.us,3AF265CC459CBF7695DD,"https://engaja.pro/20-04-engaja-01-a
+
+Boa tarde!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, governadora Hana! Resposta rápida e compromisso com a vida das pessoas, é isso que faz a diferença.
+2. Governadora Hana, liderança firme em momentos difíceis. Parabéns pelo cuidado e pela dedicação com a população.
+3. Parabéns, governadora Hana! É reconfortante ver uma gestão presente e atuando desde o primeiro momento.
+4. Governadora Hana, trabalho sério e humano, colocando as pessoas em primeiro lugar.",mensagem simples,2026-04-20 13:47:51.535+00,Engaja,251015655874706@lid,Engaja,2026-04-20 17:04:43.86007+00
+16,Pará,Engaja 2.0,Engaja 2.0 (Vermelha),120363419511068404@g.us,3AE01FFCA5FC2792E694,"https://engaja.pro/20-04-engaja-01-b
+
+Boa tarde!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, governadora Hana! Resposta rápida e compromisso com a vida das pessoas, é isso que faz a diferença.
+2. Governadora Hana, liderança firme em momentos difíceis. Parabéns pelo cuidado e pela dedicação com a população.
+3. Parabéns, governadora Hana! É reconfortante ver uma gestão presente e atuando desde o primeiro momento.
+4. Governadora Hana, trabalho sério e humano, colocando as pessoas em primeiro lugar.",mensagem simples,2026-04-20 13:48:11.935+00,Engaja,251015655874706@lid,Engaja,2026-04-20 17:05:49.268699+00
+17,Mato Grosso do Sul,Senador Nelsinho | CANAL OFICIAL,Senador Nelsinho | CANAL OFICIAL,120363423242767408@g.us,3EB0588720D6726A635888,"Boa tarde, meus amigos! 
+Passando para compartilhar um resumo da nossa última semana, que foi de muito trabalho e vitórias importantes.
+
+Destravamos o novo piso da saúde após décadas de espera, garantimos investimentos históricos para nossas estradas, recarreguei as energias na cavalgada com a nossa gente e muito mais. 
+
+*Foi uma semana de entregas reais para o nosso MS!*
+Confira os detalhes no vídeo: https://www.instagram.com/reel/DXXEq4HAKrB/
+*Boa semana para todos. Vamos juntos!*",mensagem simples,2026-04-20 15:21:13.772+00,Senador Nelsinho Trad,148155450556608@lid,Senador Nelsinho Trad,2026-04-20 18:21:14.354354+00
+18,Mato Grosso do Sul,Senador Nelsinho | CANAL OFICIAL,Senador Nelsinho | CANAL OFICIAL,120363423242767408@g.us,3EB0F7C35CFAB68B4324,📊 ENQUETE: Qual ação teve impacto direto na sua região? (Opções: Destravar o piso salarial de profissionais da saúde | Garantir R$ 1 bilhão para nossas estradas | Estruturação viária em Dourados),enquete,2026-04-20 15:21:44.994+00,Senador Nelsinho Trad,148155450556608@lid,Senador Nelsinho Trad,2026-04-20 18:21:45.45553+00
+19,Escalada,Rede Escalada,Rede Escalada,120363406995389389@g.us,3EB0496BF7CCCDCDFAC918,"🚨 *CONTAGEM REGRESSIVA: Vai mesmo deixar o iPhone escapar?*
+
+Fala, galera! A semana mal começou e o aviso é seríssimo: o acúmulo de pontos do *Mês Flash* acaba *DEPOIS DE AMANHÃ* (quarta, 22/04)! ⏳
+
+Ainda dá tempo! Cumpra suas missões e garanta seus últimos pontos. O relógio tá correndo, bora pro topo! 
+👉 https://escaladaedu.circle.so/rank-flash-estudantes",mensagem simples,2026-04-20 16:52:58.613+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-20 19:52:58.873353+00
+20,Pará,Engaja 2.0,Engaja 2.0 (Azul),120363422002705740@g.us,3EB0F4F8B023E46CB5F0F7,"Segundou, pessoal! 
+
+Mesmo com o ritmo mais leve por conta do feriado, seguimos juntos e as *missões continuam ativas por aqui.* Se precisar de qualquer ajuda, pode me chamar no privado, tá bom?",mensagem simples,2026-04-20 16:54:41.068+00,Engaja 2.0,14406041767997@lid,Engaja 2.0,2026-04-20 19:54:41.300978+00
+21,Pará,Engaja 2.0,Engaja 2.0 (Azul),120363422002705740@g.us,3EB054C680CEEE0CEE70F9,"📊 ENQUETE: Como tá o seu ritmo nesse comecinho de semana? (Opções: Tô seguindo firme, acompanhando e participando das missões🎯 | Por aqui tá mais tranquilo, mas sigo de olho em tudo💪 | Ainda não consegui acompanhar direito, mas depois do feriado volto com tudo🙏)",enquete,2026-04-20 16:54:44.687+00,Engaja 2.0,14406041767997@lid,Engaja 2.0,2026-04-20 19:54:44.899784+00
+22,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB01492EF2493C0C15E6C,"E aí, galera! 💛
+
+Passando mais uma vez os *perfis de apoio a João Campos* nos municípios de Pernambuco!
+
+É *muito importante que todos se sigam* e *façam collabs entre si*. Isso aumenta o alcance da nossa rede e fortalece a presença digital no estado inteiro.
+
+-----
+
+*Perfis Regionais*
+
+*Sertão*
+instagram.com/joaocamposnosertao
+
+*Mata Sul*
+instagram.com/matasulcomjoaocampos
+
+-----
+
+*Perfis @TOCOMJOÃO, por município*
+
+*Afogados da Ingazeira*
+instagram.com/tocomjoaoafdaingazeira
+
+*Água Preta*
+instagram.com/agua_preta_com_joao_campos
+
+*Águas Belas*
+instagram.com/aguasbelas_com_joaocampos
+
+*Amaraji*
+instagram.com/amaraji_com_joaocampos
+
+*Arcoverde*
+instagram.com/tocomjoaoarcoverde
+
+*Belém de Maria*
+instagram.com/belemdemariacomjoaocampos
+
+*Bezerros*
+instagram.com/bezerroscomjoao
+
+*Buíque*
+instagram.com/tocomjoaobuique
+
+*Cabo de Santo Agostinho*
+instagram.com/cabo_com_joaocampos
+
+*Caetés*
+instagram.com/tocomjoaocaetes
+
+*Catende* _(2 perfis)_
+instagram.com/catendecomjoaocampos
+instagram.com/catendecomjoao40
+
+*Chã Grande*
+instagram.com/chagrandecomjoaocampos
+
+*Cortês*
+instagram.com/cortescomjoaocampos
+
+*Custódia*
+instagram.com/custodia_com_joaocampos
+
+*Escada*
+instagram.com/escadacomjoaocampos
+
+*Gameleira*
+instagram.com/gameleiracomjoaocampos
+
+*Goiana*
+instagram.com/goianacomjoaocampos
+
+*Gravatá*
+instagram.com/tocomjoaogravata
+
+*Ingazeira*
+instagram.com/tocomjoaoingazeiraa
+
+*Ipubi*
+instagram.com/tocomjoaoipubii
+
+*Jaqueira*
+instagram.com/jaqueiracomjoaocampos
+
+*Joaquim Nabuco*
+instagram.com/joaquimnabucocomjoaocampos
+
+*Jupi*
+instagram.com/agrestecomjoao
+
+*Manari*
+instagram.com/manaricomjoaocampos
+
+*Olinda*
+instagram.com/olinda_com_joaocampos
+
+*Panelas*
+instagram.com/tocomjoaopanelas
+
+*Paulista*
+instagram.com/tocomjoaopaulista
+
+*Pombos*
+instagram.com/pomboscomjoaocampos
+
+*Primavera*
+instagram.com/primaveracomjoaocampos
+
+*Riacho das Almas*
+instagram.com/riacho.comjoao40
+
+*Ribeirão*
+instagram.com/ribeiraocomjoaocampos
+
+*Rio Formoso*
+instagram.com/tocomjoaorioformoso
+
+*São José da Coroa Grande*
+instagram.com/tocomjoaosanze
+
+*São Lourenço da Mata*
+instagram.com/tocomjoaosaolourenco
+
+*Serra Talhada*
+instagram.com/tocomjoaoserratalhada
+
+*Sirinhaém*
+instagram.com/sirinhaem_com_joaocampos
+
+*Tacaimbó*
+instagram.com/tocomjoaotacaimbo
+
+*Tamandaré*
+instagram.com/tamandarecomjoaocampos
+
+*Triunfo*
+instagram.com/tocomjoaotriunfo
+
+*Vitória de Santo Antão*
+instagram.com/vitoriacomjoaocampos
+
+*Xexéu*
+instagram.com/xexeucomjoaocampos",mensagem simples,2026-04-20 16:55:30.391+00,Mobiliza PE,270862800433165@lid,Mobiliza PE,2026-04-20 19:55:30.683692+00
+23,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB00C60FCE91E3E6A16,📊 ENQUETE: Como ta seu status nessa missão dos instagram? (Opções: Já to seguindo 🏃‍♀️ | Ainda vou seguir 😅),enquete,2026-04-20 16:56:07.38+00,Mobiliza PE,270862800433165@lid,Mobiliza PE,2026-04-20 19:56:07.931337+00
+24,Pará,Engaja 2.0,Engaja 2.0 (Azul),120363422002705740@g.us,3A817712998577BBC2E5,"https://engaja.pro/20-04-engaja-02-a
+
+Boa tarde!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, governadora Hana! Presença e reconhecimento a quem está na linha de frente fazem toda a diferença.
+2. Governadora Hana, liderança de verdade é estar junto nos momentos difíceis. Parabéns pela dedicação e sensibilidade.
+3. Parabéns, governadora Hana! Valorizar nossos profissionais da segurança é valorizar a vida.
+4. Governadora Hana, atitude firme e humana, reconhecendo quem cuida da nossa gente. Parabéns pelo trabalho.",mensagem simples,2026-04-20 16:56:56.826+00,Engaja,251015655874706@lid,Engaja,2026-04-20 19:56:57.079459+00
+25,Pará,Engaja 2.0,Engaja 2.0 (Vermelha),120363419511068404@g.us,3A54B1B37357BCD3392F,"https://engaja.pro/20-04-engaja-02-b
+
+Boa tarde!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, governadora Hana! Presença e reconhecimento a quem está na linha de frente fazem toda a diferença.
+2. Governadora Hana, liderança de verdade é estar junto nos momentos difíceis. Parabéns pela dedicação e sensibilidade.
+3. Parabéns, governadora Hana! Valorizar nossos profissionais da segurança é valorizar a vida.
+4. Governadora Hana, atitude firme e humana, reconhecendo quem cuida da nossa gente. Parabéns pelo trabalho.",mensagem simples,2026-04-20 16:57:14.262+00,Engaja,251015655874706@lid,Engaja,2026-04-20 19:57:14.533683+00
+26,Pará,Engaja 2.0,Engaja 2.0 (Azul),120363422002705740@g.us,3AB6CF49E0A00D1C3564,"https://engaja.pro/20-04-engaja-03-a
+
+Boa noite!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, futuro senador Helder! Reconhecimento justo a quem está na linha de frente cuidando da nossa gente.
+2. Futuro senador Helder, liderança firme e presença nos momentos difíceis fazem toda a diferença. Parabéns pelo trabalho.
+3. Parabéns, futuro senador Helder! Compromisso verdadeiro com a população e com quem mais precisa.
+4. Futuro senador Helder, é assim que se faz gestão: com respeito, responsabilidade e apoio às famílias. Parabéns.",mensagem simples,2026-04-20 19:06:08.521+00,Engaja,251015655874706@lid,Engaja,2026-04-20 22:06:08.755848+00
+27,Pará,Engaja 2.0,Engaja 2.0 (Vermelha),120363419511068404@g.us,3A9AADE98793B6F08B32,"https://engaja.pro/20-04-engaja-03-b
+
+Boa noite!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, futuro senador Helder! Reconhecimento justo a quem está na linha de frente cuidando da nossa gente.
+2. Futuro senador Helder, liderança firme e presença nos momentos difíceis fazem toda a diferença. Parabéns pelo trabalho.
+3. Parabéns, futuro senador Helder! Compromisso verdadeiro com a população e com quem mais precisa.
+4. Futuro senador Helder, é assim que se faz gestão: com respeito, responsabilidade e apoio às famílias. Parabéns.",mensagem simples,2026-04-20 19:06:22.699+00,Engaja,251015655874706@lid,Engaja,2026-04-20 22:06:23.061723+00
+28,Pará,Engaja 2.0,Engaja 2.0 (Azul),120363422002705740@g.us,3A25A132C7772A1AA3FD,"https://engaja.pro/21-04-engaja-01-a
+
+Bom dia!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, futuro senador Helder! Reconhecer quem protege a nossa gente é valorizar o que realmente importa.
+2. Futuro senador Helder, respeito e gratidão aos nossos policiais. Parabéns pela homenagem e pelo compromisso.
+3. Parabéns, futuro senador Helder! Uma liderança que valoriza coragem, dedicação e serviço à população.
+4. Futuro senador Helder, gesto importante de reconhecimento a quem está todos os dias cuidando do Pará. Parabéns.",mensagem simples,2026-04-21 09:05:41.442+00,Engaja,251015655874706@lid,Engaja,2026-04-21 12:05:41.779666+00
+29,Pará,Engaja 2.0,Engaja 2.0 (Vermelha),120363419511068404@g.us,3AAF515169B4F683BF01,"https://engaja.pro/21-04-engaja-01-b
+
+Bom dia!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, futuro senador Helder! Reconhecer quem protege a nossa gente é valorizar o que realmente importa.
+2. Futuro senador Helder, respeito e gratidão aos nossos policiais. Parabéns pela homenagem e pelo compromisso.
+3. Parabéns, futuro senador Helder! Uma liderança que valoriza coragem, dedicação e serviço à população.
+4. Futuro senador Helder, gesto importante de reconhecimento a quem está todos os dias cuidando do Pará. Parabéns.",mensagem simples,2026-04-21 09:05:48.014+00,Engaja,251015655874706@lid,Engaja,2026-04-21 12:05:48.374251+00
+30,Pará,Engaja 2.0,Engaja 2.0 (Azul),120363422002705740@g.us,3A9228DD3DFC049DA71D,"https://engaja.pro/21-04-engaja-02-a
+
+Bom dia!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, governadora Hana! Uma homenagem justa a quem dedica a vida à segurança da nossa gente.
+2. Governadora Hana, respeito e valorização aos nossos policiais. Parabéns pelo reconhecimento.
+3. Parabéns, governadora Hana! Seu compromisso com a segurança do Pará é admirável.
+4. Governadora Hana, gesto importante de reconhecimento a quem protege a sociedade. Parabéns.",mensagem simples,2026-04-21 10:48:53.453+00,Engaja,251015655874706@lid,Engaja,2026-04-21 13:48:53.668385+00
+31,Pará,Engaja 2.0,Engaja 2.0 (Vermelha),120363419511068404@g.us,3A08073F9A3950342A64,"https://engaja.pro/21-04-engaja-02-b
+
+Bom dia!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, governadora Hana! Uma homenagem justa a quem dedica a vida à segurança da nossa gente.
+2. Governadora Hana, respeito e valorização aos nossos policiais. Parabéns pelo reconhecimento.
+3. Parabéns, governadora Hana! Seu compromisso com a segurança do Pará é admirável.
+4. Governadora Hana, gesto importante de reconhecimento a quem protege a sociedade. Parabéns.",mensagem simples,2026-04-21 10:49:07.203+00,Engaja,251015655874706@lid,Engaja,2026-04-21 13:49:07.491403+00
+32,Escalada,Conexão Escalada - Nível 2,Conexão Escalada - Nível 2,120363407337623196@g.us,3EB09E63DDED04B269D7A8,"Fala, galera! O *Mês Flash* está na reta final e é hora de olhar para trás e ver o que realmente marcou sua jornada 🏁. 
+
+*Missão Final (+10 pontos)*:
+
+1️⃣ Escolha o conteúdo que mais te impactou neste *Mês Flash* e escreva um post contando o porquê.
+2️⃣ Adicione a hashtag *#flashfinal* no seu post para pontuar.
+
+🛑 *Regra:* Válido até 22/04!
+
+Qual conteúdo foi o ponto de virada para vocês este mês? 👇",mensagem simples,2026-04-21 12:52:40.468+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-21 15:52:40.854822+00
+33,Escalada,Rota de Crescimento - Nível 3,Rota de Crescimento - Nível 3,120363423283283910@g.us,3EB060DDDAC0555B84DAC7,"Fala, galera! Chegamos à última linha de chegada do *Mês Flash*. Você não é o mesmo líder que começou essa jornada e agora, no nosso último dia de pontuação, é hora de mostrar a verdade: qual foi o momento real de mudança?
+
+*Missão final (+25 pontos):*
+1️⃣ Escreva um post contando: *Qual foi conteúdo que te fez ter um o insight (a ficha que caiu) que fez mudar a sua visão?* (Pode ser algo que você aprendeu, um erro que você corrigiu ou uma percepção que mudou tudo).
+
+2️⃣ Poste na plataforma com a hashtag *#LegadoFlash*.
+
+🛑 *Regra:* use *#LegadoFlash para pontuar!*
+
+*Já revelou o seu insight?*",mensagem simples,2026-04-21 13:00:58.88+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-21 16:00:59.16496+00
+34,Escalada,Conselho Escalada - Nível 5,Conselho Escalada - Nível 5,120363425561018159@g.us,3EB09BF191D58ABCF3CC39,"*CORRE AQUI!* 🚨
+
+Último dia para pontuar no mês Flash! Você provou que tem consistência, visão e resultado. Agora, no último dia, seu papel não é apenas brilhar, é *iluminar o caminho de quem vem atrás*.
+
+*Sua missão final (+30 pontos):*
+1️⃣ Escreva um post curto e direto no feed com o título: *""O conselho que eu daria para quem está começando hoje""*. 
+2️⃣ Poste com a hashtag *#FlashMentoria*.
+3️⃣ Escolha *3 alunos* e comente no post com uma dica.
+
+🛑 *Regra:* adicione #FlashMentoria para pontuar. Válido até 22/04.
+
+*Já deixou seu legado do mês por lá?*",mensagem simples,2026-04-21 13:14:26.136+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-21 16:14:26.467497+00
+35,Escalada,Laboratório de Projetos - Nível 4,Laboratório de Projetos - Nível 4,120363406643406079@g.us,3EB00F66041E9373E058CD,"Titãs, a jornada do mês flash finaliza amanhã, mas o jogo de vocês está apenas começando. Vocês já provaram que têm consistência, agora é hora de provar que têm visão de dono.
+
+*Sua missão final (+25 pontos):*
+
+1️⃣ O Pitch: Imagine que você tem apenas 30 segundos para convencer alguém a entrar no Mês Flash e transformar o projeto dela. Grave um vídeo curto ou escreva esse texto no feed.
+
+2️⃣ O Registro: Poste com a hashtag #PitchFlash.
+
+🛑 Regra: Adicione: #PitchFlash para pontuar. Válido até 22/04 às 23h59.
+
+Já postou seu Pitch de Ouro?",mensagem simples,2026-04-21 13:23:12.545+00,Central Escalada,194674308468846@lid,Central Escalada,2026-04-21 16:23:12.880617+00
+36,Pará,Engaja 2.0,Engaja 2.0 (Azul),120363422002705740@g.us,3A64A74C6E3CC1D680C4,"https://engaja.pro/21-04-engaja-03-a
+
+Boa noite!
+
+Vamos lá!
+Curtir, comentar, compartilhar e salvar! 🚀
+
+*Exemplos de comentários para usar como base (não copie, apenas se inspire).*
+
+1. Parabéns, futuro senador Helder! Fé e valores que inspiram.
+2. Futuro senador Helder, exemplo de fé e família. Parabéns.
+3. Parabéns, futuro senador Helder! Uma lembrança cheia de significado.
+4. Futuro senador Helder, respeito e sensibilidade. Parabéns.",mensagem simples,2026-04-21 18:12:20.214+00,Engaja,251015655874706@lid,Engaja,2026-04-21 21:12:20.474311+00
+37,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0003504F06A1DCD9447,"O crime avançou porque faltou liderança. Com João governando, a história muda 🚀💛",mensagem simples,2026-04-14 08:19:11.113+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+38,Pernambuco,Lideranças - Mobiliza PE,Lideranças - Mobiliza PE,120363404880079867@g.us,3EB0006905FD84266FDC7E,*O café tá coado e a xícara já tá no ponto! Pausa pro cafezinho da tarde porque eu quero perguntar uma coisa pra vocês.*,mensagem simples,2026-04-15 16:36:29.314+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+39,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00075C40BD81FED5DFB,"Quem fez pelo Recife vai fazer pelo estado todo, simples assim 💛",mensagem simples,2026-04-16 14:08:59.222+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+40,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB000BE8CDD124F59A294,Liderança de verdade é assim: puxa pelo exemplo e não se esconde 💛🚀,mensagem simples,2026-04-15 12:10:53.878+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+41,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB000F1A7089F57273B9D,"*Feliz quarta-feira, turma! Lembrando que hoje é o nosso dia!*
+
+Tô doido pra saber o que vocês estão ouvindo nas ruas e nas redes. Nosso encontro das 19h30 é pra isso: trocar essa bola, calibrar nossos argumentos e sair pronto pra fazer esse movimento crescer ainda mais.
+
+Mas quero ouvir de vocês desde agora: *diz aí em uma palavra como tá teu dia hoje.* 💛🚀",mensagem simples,2026-03-04 11:13:48.594+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+42,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB001043FB8700AECC0AE,"*João foi lá e mandou a real:* nosso time tem lado, tem posição e tem compromisso com quem faz o Brasil avançar. 
+
+*É foco total em Pernambuco e lealdade a quem trabalha junto com a gente.* Simbora que o ritmo é de entrega e o futuro é logo ali! 💛🚀
+
+*MISSÃO:* Comentar bastante
+*Link:* https://engaja.pro/missaope02-30-03",mensagem simples,2026-03-30 16:29:02.361+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+43,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB001466D6FC910EAEF87,"Meu povo, que coisa linda ver as redes cada vez mais cheias de amarelo!💛
+*Mas a galera de lá não para e a gente não pode vacilar!*
+Quem ainda não chegou junto hoje, corre que ainda dá tempo de deixar claro pra todo o estado que #VemJoão e não tem quem segure!
+
+*Confere aí checklist do dia, e não pula nenhuma!*
+
+📍 Missão 1 : https://engaja.pro/missaope1-02-04 
+📍 Missão 2: https://engaja.pro/missaope2-02-04 
+📍 Missão 3: https://engaja.pro/missaope3-02-04 
+📍 Missão 4: https://engaja.pro/missaope4-02-04 
+📍 Missão 5: https://engaja.pro/missaope5-02-04 
+📍 Missão 6: https://engaja.pro/missaope6-02-04
+
+As sugestões de comentários estão logo aqui em cima nos posts de mais cedo. 
+É só adaptar e mandar ver!",mensagem simples,2026-04-02 18:09:25.929+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+44,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB001B68449559310D393,Isso é o que chama de gestão pública? Gastar 281 mil em pesquisa falsa? Vergonha desse governo de raquel,mensagem simples,2026-04-08 06:37:59.147+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+45,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0021882733CBBE0B4BF,"Os doente lá dentro já tão mal e ainda tem que se preocupar com chuva dentro do quarto? E a Raquel falando que reformou o HR… reformou onde, meu Deus? kkkkk",mensagem simples,2026-04-07 16:31:59.486+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+46,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0024BFB6544D2A9E092,Prometeu e cumpriu! É assim que se faz gestão. Quem faz pelo Recife vai fazer por Pernambuco inteiro! 💛,mensagem simples,2026-03-30 18:28:25.304+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+47,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB002BF844CBC59C71379,"Turma, viram essa? R$ 160 milhões pra uma empresa que nem podia assinar contrato com o governo. 🤡
+
+*Enquanto aqui no Recife a gente vê obra entregue antes do prazo, lá no Estado é esse rolo de carona em licitação e pagamento sem comprovação.* O dinheiro da educação indo pra empresa inidônea.
+
+Passa lá no link pra deixar aquele comentário esperto. Bora mostrar que Pernambuco tá vendo tudo! 🚀💛
+https://engaja.pro/missaope1-11-03",mensagem simples,2026-03-11 20:16:19.715+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+48,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB002D139419859669EF6,Não vejo a hora de chegar na urna e escolher João 💛💛,mensagem simples,2026-03-19 12:47:32.32+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+49,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB002E034B541E52D304F,O nome desse time é trabalho! 💛,mensagem simples,2026-03-28 16:16:57.105+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+50,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0031CFC5AE51AB3E4A1,"🚨*MISSÃO NOVA NA ÁREA*🚨
+
+*É a Polícia Federal no encalço do Gabinete do Ódio de Raquel Lyra!*
+
+*Link:* https://engaja.pro/missaope01-10-04
+
+*Pernambuco sempre foi terra de liberdade e de gente que trabalha de cabeça erguida.* 
+A gente sabe o valor da nossa democracia e do *respeito com a coisa pública.* 
+
+*Vamos ocupar nosso espaço comentando muito e COMPARTILHAR esse vídeo pra mostrar que a gente tá de olho* e que o nosso estado merece o melhor sempre. 
+
+É rapidinho, o *tempo de um cafezinho pra fortalecer nossa voz!* 💛🚀",mensagem simples,2026-04-10 18:52:07.411+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+51,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0036D44F049329270AB,"Posso contar com vocês? *Reage aqui* só pra eu saber como ta o clima.
+Lembrando que o nosso encontro é as *19h30!* 🚀",mensagem simples,2026-03-18 17:30:19.744+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+52,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB003FD2304429179EAA1,"*MISSÃO RÁPIDA:*
+Entra no post, comenta e compartilha nos teus Stories, nos grupos, nos status, vamos fazer essa notícia circular! 
+🔗 LINK DO POST: https://engaja.pro/pemissao1-03-03",mensagem simples,2026-03-03 08:38:28.948+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+53,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB00475DCA76ADE94BB1C,"Bom dia, turma! Março ta no nosso ritmo: *voando.* 💛
+
+*O Mobiliza é o que faz a nossa verdade chegar mais longe,* e por isso nosso encontro de *quarta, às 19:30h* já ta marcado. 
+
+Esse é o momento pra carregar as baterias e também uma chance de *quem ta chegando agora conhecer mais de pertinho*. Vamos ajustar a mira para que a segunda metade do mês seja ainda mais barulhenta (do jeito certo, com trabalho!).
+
+Conto vocês da casa pra recepcionar o pessoal que ta chegando agora. 🚀",mensagem simples,2026-03-17 11:00:26.85+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+54,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB004B10E059334224F75,"*🚨NOVA MISSÃO🚨*
+
+*O assunto é o mesmo, não podemos deixar eles criarem falsas narrativas.*
+
+1️⃣ Vocês já estão ligados nos comentários!
+
+*2️⃣ Bota pra moer:* https://engaja.pro/missaope04-08-04",mensagem simples,2026-04-08 13:07:22.99+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+55,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB0059864FEAAA2A285E1,"🚨*EI, SURGIU MISSÃO DUPLA AQUI, VAMOS NESSA!*🚨
+
+
+*É PRIMEIRO TURNO!* A pesquisa do Datafolha mostrou que o nosso trabalho tá dando resultado, viu?  
+
+Vamos seguir firmes, pra deixar Pernambuco na frente!  #PEPraFrente 🚀💛
+
+*Vamos nos DOIS LINKS lotar tudo, galera!*
+
+🔗Link 1️⃣: https://engaja.pro/missaope01-16-04
+
+🔗Link 2️⃣: https://engaja.pro/missaope02-16-04",mensagem simples,2026-04-16 14:06:51.475+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+56,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB006417A4832D8C1A72E,"Quando aperta, ele responde com mais trabalho. É esse perfil que faz a diferença 🚀💛",mensagem simples,2026-04-15 12:11:16.9+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+57,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB006AAB1060B6F29F36B,"Lamentável como tudo que essa governadora bota a mão vira escândalo, tá repreendido! Vem logo, João!",mensagem simples,2026-03-25 15:54:06.422+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+58,Pernambuco,Lideranças - Mobiliza PE,Lideranças - Mobiliza PE,120363404880079867@g.us,3EB006FE51391817F27DD0,"Bora minha liderança massa!
+O cheiro do almoço já tá tomando conta dor ar por aqui.
+
+*Nosso encontro oficial é às 19h, mas às 18h45 eu já tô com a cadeira puxada.*
+É o tempo de dar aquele ajuste fino e garantir que tudo fique o mais lindo possível pro nosso time.
+
+Se avexe não, mas chegue cedo! Bora moer que o projeto é gigante! #PEpraFrente!",mensagem simples,2026-04-15 12:26:33.65+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+59,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB0070C85F09B149D4186,Pernambuco inteiro vai sentir essa entrega. Tô com muito orgulho 💛💛,mensagem simples,2026-04-14 18:14:22.178+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+60,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB0075CB790AAC9EC4E05,"Simbora que a semana começou com a força do Sertão!
+
+*João Campos já amanheceu no Araripe,* refazendo os passos de Arraes e Eduardo pra buscar a bênção do Padre Cícero. *É Pernambuco unido, do litoral ao sertão, com o coração cheio de esperança e muito trabalho pela frente.* 
+
+*A vontade de fazer mais pelo nosso estado só aumenta.* É pé na estrada e fé no futuro! 🟡✨
+
+*1️⃣MISSÃO: vamos lá dar o nosso apoio, galera massa!*
+
+*2️⃣Link:* https://engaja.pro/missaope01-06-04",mensagem simples,2026-04-06 09:33:09.115+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+61,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB007B79DB77D10E6590D,"É esperar outubro pra Pernambuco voltar a ter manchete positiva de novo, porque o negócio tá feio com Raquel",mensagem simples,2026-03-25 15:54:37.331+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+62,Pernambuco,Lideranças - Mobiliza PE,Lideranças - Mobiliza PE,120363404880079867@g.us,3EB007D943A526308CA88E,"Bom dia, turma! 
+
+Se o ritmo lá fora tá acelerado, por aqui a gente segue naquela base: foco no que o Recife tá mostrando e olho aberto com as ""novidades"" que chegam do Estado.
+
+Que os próximos dias sejam leves e cheios daquela ocupação inteligente que só esse grupo sabe fazer.
+
+Bora pra cima! 🚀💛",mensagem simples,2026-02-23 09:49:27.969+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+63,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB00811906DF7BBF95DDD,"Guarda treinada, câmera corporal, Polícia Federal no processo. Sério, responsável e eficiente. É João pra governador! 💛💛🚀",mensagem simples,2026-03-30 18:28:22.312+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+64,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB00836CECDEB1C2D5DE4,(Mensagem de mídia sem texto),mensagem simples,2026-04-06 14:10:22.674+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+65,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0089E5044B3FF0F6F50,"Psiu, tem alguém ai? 👀",mensagem simples,2026-02-21 21:15:24.214+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+66,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB008D407DCAC574E937F,"🚨 *MISSÃO NOVA NA ÁREA* 🚨
+
+Pernambuco está se mobilizando! *A segurança pública é questão de liderança, coragem e compromisso de todos nós.* Vamos valorizar quem trabalha na linha de frente e garantir que nosso povo tenha as condições de viver tranquilo. Juntos, somos mais fortes! 
+
+*1️⃣ Vamos compartilhar bastante, pessoal!*
+
+*🔗Link:* https://engaja.pro/missaope01-13-04",mensagem simples,2026-04-13 15:30:02.284+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+67,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB009A919A0B472DE68AA,"Se gastasse esses 281 mil com saúde, talvez não precisasse de pesquisa falsa pra criar boa avaliação",mensagem simples,2026-04-08 06:39:31.979+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+68,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB00A14C7B9E41DD71401,"Ó galera, só pra não ter erro nessa missão que tá um pouco diferente:
+Salva a foto, cria um textinho teu, mete a hashtag #PEPraFrente e o 💛, e depois solta em todo canto!
+
+Vamo mostrar que o futuro de Pernambuco é amarelo!🚀💛",mensagem simples,2026-03-23 07:33:28.094+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+69,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00AD2E372460F53C049,O sentimento nas ruas já diz tudo: tá chegando a hora do nosso governador! 💛,mensagem simples,2026-03-31 08:20:47.514+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+70,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00AD40FC61CBD950B16,"*João foi lá e mandou a real:* nosso time tem lado, tem posição e tem compromisso com quem faz o Brasil avançar. 
+
+*É foco total em Pernambuco e lealdade a quem trabalha junto com a gente.* Simbora que o ritmo é de entrega e o futuro é logo ali! 💛🚀
+
+*MISSÃO:* Comentar bastante
+*Link:* https://engaja.pro/missaope02-30-03",mensagem simples,2026-03-30 16:29:13.506+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+71,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00B783A38465C8FFB0D,(Mensagem de mídia sem texto),mensagem simples,2026-04-06 14:12:15.266+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+72,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00C361222DF62A2E327,"Esse é o perfil de governador que o estado precisa, que faz de verdade 💛💛💛💛💛",mensagem simples,2026-03-03 08:40:11.534+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+73,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00D1D59ABF7D62B9686,A herança de Miguel Arraes chegando ao Sertão do Araripe com o bisneto. Isso é história se repetindo com força total. Tô com muito orgulho dessa candidatura. 💛💛🚀,mensagem simples,2026-04-06 09:38:40.891+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+74,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00DCEC7D07A8BD0AE7A,(Mensagem de mídia sem texto),mensagem simples,2026-04-08 08:21:38.173+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+75,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00DE7C13A56D9DBA961,"Encerrar o ciclo na prefeitura assim, com entrega, com emoção, com legado — só quem governa de verdade consegue 💛💛",mensagem simples,2026-04-02 16:28:13.726+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+76,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00E154027330061FAB0,"É esse tipo de governador que Pernambuco precisa, toma conta logo de PE, meu prefeitoo 💛",mensagem simples,2026-03-03 08:39:59.002+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+77,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB00E6F744E7464855FB5,Braço forte contra o crime e oportunidade pra quem precisa. Gestão completa 💛🚀,mensagem simples,2026-04-14 08:18:48.627+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+78,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB00E757AA9D9FFA275FE,"*Nosso time ta pronto!* Esse é o recado que a gente precisa espalhar pra Pernambuco, então *bora lá compartilhar,* é rapidinho.
+
+*Missão:* https://engaja.pro/missaope5-28-03 
+
+Simbora! 💛🚀",mensagem simples,2026-03-28 16:15:45.478+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+79,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB00EAFBFCA43D1B73297,A herança de Miguel Arraes chegando ao Sertão do Araripe com o bisneto. Isso é história se repetindo com força total. Tô com muito orgulho dessa candidatura. 💛💛🚀,mensagem simples,2026-04-06 09:34:50.146+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+80,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB00F498700427CCD4B97,"Olhem como a oposição está se organizando nos posts. *Se a gente não ocupa os espaços, a narrativa deles vira verdade absoluta para quem está só de passagem.* Não podemos dar brecha! 
+Lembrem-se: *o algoritmo entende que o que tem mais curtida é o mais relevante.* Passem lá, deem aquele like nos nossos.",mensagem simples,2026-04-02 19:35:54.753+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+81,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0101C0E6C033B8B8C33,Muito importante ver ações que colocam a proteção das mulheres como prioridade. Que essa mensagem chegue a cada vez mais pessoas.,mensagem simples,2026-03-08 10:53:02.433+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+82,Pernambuco,Lideranças - Mobiliza PE,Lideranças - Mobiliza PE,120363404880079867@g.us,3EB0109CA77BFD3163E16A,"Bora que o café já tá no bule! ☕️
+
+Em *15 minutos* a gente abre a sala exclusiva aqui das lideranças para aquele alinhamento fino antes do grupão entrar. 
+
+É o tempo de ajeitar o fone e separar o que a gente sentiu do clima da rua hoje. 
+
+*Link da sala aqui:* https://meet.google.com/npz-izio-miu 
+
+Vejo vocês já já! 🚀",mensagem simples,2026-03-18 18:45:11.827+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+83,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB010CA39DAE5D1A25C80,"*Já pega um comentário aqui pra se inspirar, cria o seu nas suas palavras e solta lá nos 3 links!*",mensagem simples,2026-04-02 12:28:54.755+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+84,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB0111D5B20B599A3EEF8,Pernambuco acaba de se encher de esperança 💛💛,mensagem simples,2026-03-28 14:59:45.966+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+85,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB011EAE063C68F53B323,"O povo só quer uma coisa: vem, João 💛",mensagem simples,2026-03-18 15:33:17.242+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+86,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB011FA8FCDE933A5EF3F,"Recife ganhou mais um espaço lindo e a gente já sabe que Pernambuco inteiro vai ganhar muito mais. Vai, João! 💛🚀",mensagem simples,2026-04-02 16:26:07.125+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+87,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB011FB9850476DF3FDAD,"Esse é o João que a gente conhece: dificuldade não intimida, só aumenta a disposição 💛",mensagem simples,2026-04-14 16:25:56.989+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+88,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB012038A037C12D101F0,"O trabalho não para e agora o estado todo precisa de você, João! 💛💛💛",mensagem simples,2026-03-27 16:24:13.362+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+89,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB01219756FE47E11DF46,"João já provou que sabe fazer, agora é ampliar pro estado inteiro 💛🚀",mensagem simples,2026-04-08 09:57:16.552+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+90,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB0125167597949C8E5E9,"*Já pega um comentário aqui pra se inspirar, cria o seu nas suas palavras e solta lá nos 3 links!*",mensagem simples,2026-04-02 12:30:55.488+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+91,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB0136D7A7566E2C6271A,"Galera, 30 minutinhos pra gente dar o start oficial! ⏳
+
+Já avisou em casa que a partir das 19h30 você tá em **modo Mobiliza PE**? 
+Hoje o papo pede atenção total porque vamos abrir o mapa da semana e entender como o ritmo de Recife vai ganhar corpo em cada canto de Pernambuco. 
+
+Pega o link e já deixa no gatilho:  https://meet.google.com/tif-zugp-sqg
+
+É hora de carregar a bateria, do celular e a nossa também, pra gente entrar com tudo. 
+Quem já tá com o radar ligado por aí? Solta um ⚡️ aqui no grupo!",mensagem simples,2026-03-11 19:08:39.175+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+92,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB013A7C783B39D4897F0,"*🚨MISSÃO NOVA NA ÁREA🚨*
+
+Tem gente que deve tá precisando de um chá de boldo hoje, viu? 
+
+Olharam a pesquisa e o desespero bateu forte! Enquanto eles ficam aí procurando desculpa e roendo as unhas, *a gente segue trabalhando e comemorando o reconhecimento. A diferença é grande porque o trabalho é maior ainda.* 💛🚀
+
+*1️⃣ Bora continuar nos comentários*
+
+*2️⃣ Link:* https://engaja.pro/missaope03-08-04",mensagem simples,2026-04-08 11:14:41.801+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+93,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB013B0BB7A27E21A6044,"Quando a liderança dá o exemplo, o time inteiro levanta. É isso aqui 💛",mensagem simples,2026-04-14 16:26:20.773+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+94,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB01486A9F6FF92E850D4,"E pra facilitar, pega um comentário pra se inspirar:",mensagem simples,2026-03-31 08:21:05.253+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+95,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB0148E587823E69D2CB5,"Bom dia, turma! Como estamos? ☀️
+Dizem que quem cedo madruga... *posta foto de esperança pelo nosso estado!* 😂
+
+Vamos fazer um barulho silencioso?! *Bora postar essa foto aqui,* pode ser no status, em grupo, nos stories, no feed do Instagram… Em todo canto! O que importa *é postar* e *marcar o perfil de @joaocampos.* 
+Bora mostrar que *João Campos é o futuro de Pernambuco* e que o AMARELO daqui combina com o sol de logo cedo.
+
+*Podem usar a imaginação* e fazer aquela legenda caprichada do seu jeito, mas ó, *usa a #PEPraFrente* e o 💛, pra gente começar a semana fazendo aquela folia gostosa.",mensagem simples,2026-03-23 07:22:30.354+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+96,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB014D507816E6EE3B7EA,"Pessoal, passando aqui no final do dia pra relembrar que *tivemos missões hoje* e é importante voltar em cada link pra dar aquela reforçada.
+
+Confere se já fez todas:
+1️⃣  https://engaja.pro/pemissao02-03-03
+2️⃣ https://engaja.pro/pemissao03-03-03
+3️⃣https://engaja.pro/pemissao03-03-04 
+4️⃣ https://engaja.pro/pemissao03-03-05
+
+*Se ainda falta alguma, esse é o momento de finalizar.* 🚀💛",mensagem simples,2026-03-03 17:35:00.471+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+97,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB0155D41373E1D38B32A,"Quem mora no interior sabe bem o peso disso. A gente atravessa a divisa e parece outro mundo. Pernambuco merece muito mais, e com João Campos no governo vai ser diferente 💛",mensagem simples,2026-04-06 16:54:03.119+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+98,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB016878414DF11118A2C,"Quando o resultado aparece assim, não tem dúvida de pra onde vai o voto 💛💛🚀",mensagem simples,2026-04-01 18:49:56.282+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+99,Pernambuco,Mobiliza PE,Mobiliza PE,120363405595256912@g.us,3EB016B0AD07C1FB4C904F,"Bom dia, pessoal! ☀️
+
+*MISSÃO TRIPLA FRESQUINHA*
+
+*Eles não param de tentar criar narrativas* sobre coisas que só existem na cabeça deles. Enquanto eles vão ficando cada vez mais roxos de raiva, *a gente vai pintando a nossa história com* o que realmente importa: *trabalho, seriedade e transparência.*
+
+Falta pouco para nossa chapa ser oficializada, *vambora dar aquele apoio* de quem é gente de verdade e *amarelar os comentários.* 💛🚀
+
+🔗Missão 1: https://engaja.pro/missaope1-19-03
+🔗Missão 2: https://engaja.pro/missaope2-19-03
+🔗MIssão 3: https://engaja.pro/missaope3-19-03",mensagem simples,2026-03-19 12:43:35.46+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+100,Pernambuco,Mobiliza,Mobiliza,120363425016992076@g.us,3EB016FF0122FB1310144D,"Saúde precária, escola sem estrutura, e sobra 281 mil pra pesquisa fake? Triste",mensagem simples,2026-04-08 06:39:13.147+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
+101,Pernambuco,Lideranças - Mobiliza PE,Lideranças - Mobiliza PE,120363404880079867@g.us,3EB01814430F2E6B32B74D,"A fogueira já tá alta e as bandeirinhas já tão no céu!
+
+Ainda não é junho, mas o calor do nosso movimento já tá aquecendo o estado todo! Faltam *15 minutinhos* pra gente começar o nosso encontro oficial.
+
+Já puxei a cadeira e o salão tá pronto pra receber quem faz a diferença. Chega junto pra gente fazer o projeto crescer! *#PEpraFrente!*
+
+🔗Link: https://engaja.pro/encontro-liderancas-mobilizape",mensagem simples,2026-04-15 18:46:53.247+00,Mobiliza PE,111055674052635@lid,Mobiliza PE,2026-04-18 01:39:35.907327+00
