@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coração de Marília Arraes</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --slide-duration: 0.4s;
+      
+      /* Identidade Visual Calibrada - Laranja Marília */
+      --bg-main: #FFFFFF;
+      --bg-gradient: linear-gradient(160deg, #FFFFFF 0%, #FFFAF5 50%, #FFF3EB 100%);
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --brand-orange: #F97316; /* Laranja vibrante principal */
+      --brand-orange-dark: #EA580C; /* Laranja profundo para destaques */
+      --border-light: rgba(0, 0, 0, 0.12);
+      --input-bg: rgba(249, 115, 22, 0.03); /* Fundo de input com leve toque de laranja */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* Elementos Fixos */
+    .cross-link {
+      position: fixed; top: 36px; right: 56px; z-index: 20;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--brand-orange-dark); text-decoration: none;
+      border: 1px solid rgba(249, 115, 22, 0.3); padding: 10px 20px; border-radius: 999px;
+      transition: 0.2s; background: rgba(255, 255, 255, 0.9);
+      font-weight: 700;
+    }
+    .cross-link:hover { border-color: var(--brand-orange); background: var(--brand-orange); color: #FFF; }
+
+    /* Navegação Inferior */
+    .ui-controls {
+      position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 12px; align-items: center; z-index: 100;
+      padding: 12px 24px; background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-light); border-radius: 999px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 25px rgba(249, 115, 22, 0.08);
+    }
+    .ui-btn {
+      color: var(--text-muted); cursor: pointer; opacity: 0.8; transition: 0.2s; font-size: 16px;
+      display: flex; align-items: center; justify-content: center; font-weight: 700;
+    }
+    .ui-btn:hover { opacity: 1; color: var(--brand-orange); }
+    .ui-counter { font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.18em; color: var(--text-muted); padding: 0 8px; }
+    .ui-dots { display: flex; gap: 8px; padding: 0 12px; }
+    .ui-dot { width: 5px; height: 5px; border-radius: 999px; background: rgba(0,0,0,0.1); transition: 0.2s; }
+    .ui-dot.active { background: var(--brand-orange); width: 16px; }
+
+    /* Estrutura de Slides */
+    .slider { position: relative; width: 100vw; height: 100vh; height: 100dvh; }
+    
+    .slide {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      justify-content: flex-start; 
+      align-items: center;
+      opacity: 0; pointer-events: none; transition: opacity var(--slide-duration) ease-out, transform var(--slide-duration) ease-out;
+      z-index: 1; transform: translateY(10px); 
+      padding: 80px 20px 40px 20px; 
+      overflow-y: auto; 
+      scrollbar-width: thin;
+    }
+
+    .slide::after {
+      content: '';
+      display: block;
+      min-height: 140px;
+      width: 100%;
+      flex-shrink: 0;
+    }
+    
+    .slide.active { opacity: 1; pointer-events: auto; z-index: 2; transform: translateY(0); }
+
+    .slide-content { width: 100%; max-width: 720px; margin: auto 0; }
+
+    /* Tipografia */
+    .kicker {
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--brand-orange); display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+    }
+    .kicker .tick { width: 24px; height: 1px; background: currentColor; opacity: 0.6; }
+
+    .protagonista { font-weight: 600; font-size: 50px; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 24px; color: var(--text-main); }
+    .lead { font-weight: 400; font-size: 20px; line-height: 1.6; color: var(--text-muted); margin-bottom: 48px; }
+    
+    .mk-brand { box-shadow: inset 0 -0.38em 0 0 rgba(249, 115, 22, 0.12); color: var(--brand-orange-dark); padding: 0 .08em; }
+
+    /* Inputs */
+    .form-row { margin-bottom: 36px; }
+    .form-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); display: block; margin-bottom: 12px; font-weight: 700; }
+
+    input[type="text"], input[type="tel"], select {
+      width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--border-light);
+      padding: 16px 0; color: var(--text-main); font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 500;
+      transition: 0.2s; outline: none; border-radius: 0;
+    }
+    input:focus, select:focus { border-bottom-color: var(--brand-orange); }
+    input::placeholder { color: rgba(15, 23, 42, 0.25); }
+    select option { background: #FFF; color: var(--text-main); font-size: 18px; }
+
+    .whatsapp-group { display: flex; align-items: flex-end; border-bottom: 1px solid var(--border-light); transition: 0.2s; }
+    .whatsapp-group:focus-within { border-bottom-color: var(--brand-orange); }
+    .ddi-prefix { padding: 16px 12px 16px 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; color: var(--text-muted); font-weight: 500; }
+    .whatsapp-group input[type="tel"] { border: none; padding-left: 0; }
+
+    /* Botões */
+    .btn-exec {
+      background: transparent; color: var(--text-main); border: 1px solid var(--border-light);
+      font-family: 'JetBrains Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;
+      padding: 20px 40px; border-radius: 999px; cursor: pointer; transition: 0.2s; display: inline-flex; align-items: center; gap: 12px;
+    }
+    .btn-exec:hover { border-color: var(--brand-orange); background: rgba(249, 115, 22, 0.05); color: var(--brand-orange-dark); }
+    
+    .btn-exec.filled { background: var(--brand-orange); color: #FFF; border-color: var(--brand-orange); }
+    .btn-exec.filled:hover { background: var(--brand-orange-dark); border-color: var(--brand-orange-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(249, 115, 22, 0.25); }
+
+    .error-msg { color: var(--brand-orange-dark); font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: 10px; display: none; text-transform: uppercase; font-weight: 700; }
+
+    @media (max-width: 820px) {
+      .cross-link { right: 20px; top: 24px; padding: 8px 16px; font-size: 11px; }
+      .protagonista { font-size: 36px; margin-bottom: 16px; }
+      .lead { font-size: 17px; margin-bottom: 32px; }
+      .slide { padding: 60px 24px 20px 24px; }
+      .ui-controls { bottom: 20px; }
+      input[type="text"], input[type="tel"], select { font-size: 19px; }
+      .ddi-prefix { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cross-link" id="status-badge">Formulário Ativo</div>
+
+  <div class="ui-controls">
+    <div class="ui-btn" onclick="prevSlide()">❮</div>
+    <div class="ui-counter"><span id="currSlide">01</span> / 02</div>
+    <div class="ui-dots" id="dot-container">
+      <div class="ui-dot active"></div>
+      <div class="ui-dot"></div>
+    </div>
+    <div class="ui-btn" onclick="nextSlide(currentSlideIndex)">❯</div>
+  </div>
+
+  <form id="multi-step-form">
+    <input type="hidden" name="ind" id="ind" value="" />
+    <input type="hidden" name="nivel" id="nivel" value="" />
+
+    <div class="slider">
+      
+      <div class="slide active" id="slide-1">
+        <div class="slide-content">
+          <div class="kicker"><span class="tick"></span>01 . Visão Geral</div>
+          <h1 class="protagonista">Você foi selecionado para ser o <span class="mk-brand">coração de Marília Arraes</span> 🧡</h1>
+          <p class="lead">Você faz parte de um grupo exclusivo, escolhido a dedo para irradiar o sentimento dela por Pernambuco.<br><br>Queremos que você se sinta especial e valorizado nessa jornada ao nosso lado.<br><br>Preencha os dados abaixo com atenção.</p>
+          <button type="button" class="btn-exec" onclick="nextSlide(1)">Iniciar Cadastro <span>→</span></button>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-2">
+        <div class="slide-content">
+          <div class="kicker"><span class="tick"></span>02 . Identificação</div>
+          
+          <div class="form-row">
+            <label class="form-label" for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="municipio">Município de Atuação Principal</label>
+            <select id="municipio" name="municipio" required>
+              <option value="" disabled selected>Selecione sua cidade...</option>
+              <option value="Recife">Recife</option>
+              <option value="Jaboatão dos Guararapes">Jaboatão dos Guararapes</option>
+              <option value="Olinda">Olinda</option>
+              <option value="Caruaru">Caruaru</option>
+              <option value="Petrolina">Petrolina</option>
+              <option value="Paulista">Paulista</option>
+              <option value="Cabo de Santo Agostinho">Cabo de Santo Agostinho</option>
+              <option value="Camaragibe">Camaragibe</option>
+              <option value="Garanhuns">Garanhuns</option>
+              <option value="Vitória de Santo Antão">Vitória de Santo Antão</option>
+              <option value="Igarassu">Igarassu</option>
+              <option value="São Lourenço da Mata">São Lourenço da Mata</option>
+              </select>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="instagram">@ do Instagram</label>
+            <input type="text" id="instagram" name="instagram" placeholder="Ex: @seuusuario" required>
+          </div>
+
+          <div class="form-row" style="margin-bottom: 48px;">
+            <label class="form-label" for="whatsapp">Número de WhatsApp</label>
+            <div class="whatsapp-group">
+              <span class="ddi-prefix">+55</span>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000" required pattern="\(\d{2}\) 9\d{4}-\d{4}">
+            </div>
+            <div id="whatsapp-error" class="error-msg">Formato Necessário: (DD) 9XXXX-XXXX</div>
+          </div>
+
+          <button type="submit" class="btn-exec filled">Concluir e Entrar na Comunidade</button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+  <script>
+    let currentSlideIndex = 1;
+    const totalSlides = 2;
+
+    function updateUI() {
+      document.getElementById('currSlide').innerText = `0${currentSlideIndex}`;
+      const dots = document.querySelectorAll('.ui-dot');
+      dots.forEach((dot, index) => {
+        if(index + 1 === currentSlideIndex) dot.classList.add('active');
+        else dot.classList.remove('active');
+      });
+    }
+
+    function nextSlide(step) {
+      if(currentSlideIndex >= totalSlides) return;
+      if(step && !validateStep(step)) return;
+      document.getElementById(`slide-${currentSlideIndex}`).classList.remove('active');
+      currentSlideIndex++;
+      document.getElementById(`slide-${currentSlideIndex}`).classList.add('active');
+      document.getElementById(`slide-${currentSlideIndex}`).scrollTop = 0;
+      updateUI();
+    }
+
+    function prevSlide() {
+      if(currentSlideIndex <= 1) return;
+      document.getElementById(`slide-${currentSlideIndex}`).classList.remove('active');
+      currentSlideIndex--;
+      document.getElementById(`slide-${currentSlideIndex}`).classList.add('active');
+      updateUI();
+    }
+
+    function validateStep(step) {
+      const currentStepEl = document.getElementById(`slide-${step}`);
+      const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
+      let valid = true;
+      inputs.forEach(input => {
+        if (!input.reportValidity()) valid = false;
+      });
+      return valid;
+    }
+
+    const zapInput = document.getElementById('whatsapp');
+    const zapError = document.getElementById('whatsapp-error');
+
+    zapInput.addEventListener('input', function(e) {
+      let val = e.target.value.replace(/\D/g, ''); 
+      if (val.length > 11) val = val.slice(0, 11);
+      let formatted = '';
+      if (val.length > 0) formatted += '(' + val.substring(0,2);
+      if (val.length >= 3) {
+        let thirdDigit = val.substring(2,3);
+        if(thirdDigit !== '9' && val.length === 3) val = val.substring(0,2) + '9' + thirdDigit;
+        formatted += ') ' + val.substring(2,7);
+      }
+      if (val.length >= 8) formatted += '-' + val.substring(7,11);
+      e.target.value = formatted;
+      if(val.length > 0 && val.length < 11) {
+        zapInput.setCustomValidity("Incompleto");
+        zapError.style.display = 'block';
+      } else {
+        zapInput.setCustomValidity("");
+        zapError.style.display = 'none';
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      ['ind', 'nivel'].forEach(param => {
+        if (urlParams.has(param)) {
+          const field = document.getElementById(param);
+          if (field) field.value = urlParams.get(param);
+        }
+      });
+    });
+
+    document.getElementById('multi-step-form').addEventListener('submit', async function(e) {
+      e.preventDefault(); 
+
+      const btnSubmit = document.querySelector('button[type="submit"]');
+      const originalText = btnSubmit.innerHTML;
+      btnSubmit.innerHTML = 'Enviando...';
+      btnSubmit.style.pointerEvents = 'none';
+
+      const formData = new FormData(this);
+
+      const payload = {
+        data_hora: new Date().toLocaleString('pt-BR'),
+        nome: formData.get('nome'),
+        municipio: formData.get('municipio'),
+        instagram: formData.get('instagram'),
+        whatsapp: formData.get('whatsapp'),
+        ind: formData.get('ind') || "",
+        nivel: formData.get('nivel') || ""
+      };
+
+      const webhookUrl = 'https://webhookn8n.tnledu.shop/webhook/form-marilia-arraes';
+
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          window.location.href = 'https://google.com'; 
+        } else {
+          throw new Error('Erro na resposta do webhook');
+        }
+      } catch (error) {
+        alert('Tivemos um problema de conexão. Por favor, tente enviar novamente.');
+        btnSubmit.innerHTML = originalText;
+        btnSubmit.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+
+</body>
+</html>
