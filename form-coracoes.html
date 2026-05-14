@@ -312,12 +312,20 @@
 
       const formData = new FormData(this);
 
+      // Montando o JSON com o ID único e as variáveis atualizadas
       const payload = {
+        submission_id: crypto.randomUUID(),
         data_hora: new Date().toLocaleString('pt-BR'),
         nome: formData.get('nome'),
         municipio: formData.get('municipio'),
         instagram: formData.get('instagram'),
         whatsapp: formData.get('whatsapp'),
+        costuma_comentar: formData.get('costuma_comentar'),
+        rede_principal: formData.get('rede_principal'),
+        frequencia_missoes: formData.get('frequencia_missoes'),
+        habilidades: habilidadesSelecionadas,
+        outra_habilidade: formData.get('outra_habilidade') || "",
+        sugestoes: formData.get('sugestoes') || "",
         ind: formData.get('ind') || "",
         nivel: formData.get('nivel') || ""
       };
