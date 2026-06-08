@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Hidrossanitário e Pluvial - UFAL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: rgba(20, 27, 45, 0.7);
+            --accent-color: #00f0ff;
+            --accent-hover: #00c3ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: rgba(0, 240, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 240, 255, 0.05), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(0, 195, 255, 0.05), transparent 25%);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header fixo com efeito Glassmorphism */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Container Principal */
+        main {
+            max-width: 1400px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        /* Seções dos Embeds */
+        section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 240, 255, 0.1);
+            border-color: rgba(0, 240, 255, 0.4);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        /* Botão Fullscreen */
+        .btn-fullscreen {
+            background: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-fullscreen:hover {
+            background: var(--accent-color);
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+        }
+
+        /* Container do PDF */
+        .embed-container {
+            width: 100%;
+            height: 75vh;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Ajustes quando em tela cheia */
+        .embed-container:fullscreen {
+            height: 100vh;
+            width: 100vw;
+            border: none;
+            border-radius: 0;
+            background-color: #000;
+        }
+        
+        .embed-container:fullscreen iframe {
+            height: 100%;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 240, 255, 0.3);
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Apresentação AB2</h1>
+        <nav>
+            <a href="#memorial">Memorial</a>
+            <a href="#esquemas">Esquemas</a>
+            <a href="#detalhes">Detalhes</a>
+            <a href="#orcamento">Orçamento</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="memorial">
+            <div class="section-header">
+                <h2>Memorial Descritivo</h2>
+                <button class="btn-fullscreen" onclick="toggleFullscreen('pdf-memorial')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                    Tela Cheia
+                </button>
+            </div>
+            <div class="embed-container" id="pdf-memorial">
+                <iframe src="_Memorial de Sanitário e Pluvial - 2026 (1).pdf#toolbar=0&navpanes=0" title="Memorial Descritivo"></iframe>
+            </div>
+        </section>
+
+        <section id="esquemas">
+            <div class="section-header">
+                <h2>Esquemas Sanitários</h2>
+                <button class="btn-fullscreen" onclick="toggleFullscreen('pdf-esquemas')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                    Tela Cheia
+                </button>
+            </div>
+            <div class="embed-container" id="pdf-esquemas">
+                <iframe src="ESQUEMAS - SANITÁRIO..pdf#toolbar=0&navpanes=0&view=FitH" title="Esquemas Sanitários"></iframe>
+            </div>
+        </section>
+
+        <section id="detalhes">
+            <div class="section-header">
+                <h2>Prancha de Detalhes</h2>
+                <button class="btn-fullscreen" onclick="toggleFullscreen('pdf-detalhes')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                    Tela Cheia
+                </button>
+            </div>
+            <div class="embed-container" id="pdf-detalhes">
+                <iframe src="DETALHES - SANITÁRIO..pdf#toolbar=0&navpanes=0&view=FitH" title="Prancha de Detalhes"></iframe>
+            </div>
+        </section>
+
+        <section id="orcamento">
+            <div class="section-header">
+                <h2>Orçamento de Materiais</h2>
+                <button class="btn-fullscreen" onclick="toggleFullscreen('pdf-orcamento')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                    Tela Cheia
+                </button>
+            </div>
+            <div class="embed-container" id="pdf-orcamento">
+                <iframe src="Orcamento_Estimado_Materiais_Sanitario_v2.pdf#toolbar=0&navpanes=0" title="Orçamento Estimado"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Função para ativar/desativar o modo tela cheia no contêiner do iframe
+        function toggleFullscreen(elementId) {
+            const container = document.getElementById(elementId);
+            
+            if (!document.fullscreenElement &&    // Standard
+                !document.mozFullScreenElement && // Firefox
+                !document.webkitFullscreenElement && // Chrome, Safari e Opera
+                !document.msFullscreenElement) {  // IE/Edge
+                
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.mozRequestFullScreen) { /* Firefox */
+                    container.mozRequestFullScreen();
+                } else if (container.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) { /* IE/Edge */
+                    container.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        // Suaviza a rolagem ao clicar nos links do menu
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                // Ajuste para o header fixo não cobrir o título
+                const offset = 100;
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+          
+                window.scrollTo({
+                     top: offsetPosition,
+                     behavior: "smooth"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
